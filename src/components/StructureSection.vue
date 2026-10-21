@@ -3,7 +3,7 @@
     <div class="max-w-7xl mx-auto px-4 lg:px-12">
       <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-12">
         <div class="space-y-2 max-w-xl">
-          <div class="inline-flex items-center gap-2 text-[#00e65b] font-display text-xs uppercase tracking-widest">
+          <div class="inline-flex items-center gap-2 text-brand-primary font-display text-xs uppercase tracking-widest">
             <span class="material-symbols-outlined text-[16px]">domain</span>
             Estrutura de Alta Performance
           </div>
@@ -18,9 +18,9 @@
 
       <!-- 4 Pilares -->
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        <div class="bg-[#201f21] rounded-xl p-6 flex flex-col justify-between hover:bg-[#2a2a2c] transition-colors border border-[#3c4b3b]/30">
+        <div class="bg-brand-card rounded-xl p-6 flex flex-col justify-between hover:bg-brand-card-high transition-colors border border-[#3c4b3b]/30">
           <div class="space-y-4">
-            <div class="w-12 h-12 rounded-xl bg-[#2a2a2c] flex items-center justify-center text-[#00e65b]">
+            <div class="w-12 h-12 rounded-xl bg-brand-card-high flex items-center justify-center text-brand-primary">
               <span class="material-symbols-outlined text-[28px]">fitness_center</span>
             </div>
             <h3 class="font-display text-lg uppercase text-white font-bold">Hipertrofia & Musculação</h3>
@@ -28,9 +28,9 @@
           </div>
         </div>
 
-        <div class="bg-[#201f21] rounded-xl p-6 flex flex-col justify-between hover:bg-[#2a2a2c] transition-colors border border-[#3c4b3b]/30">
+        <div class="bg-brand-card rounded-xl p-6 flex flex-col justify-between hover:bg-brand-card-high transition-colors border border-[#3c4b3b]/30">
           <div class="space-y-4">
-            <div class="w-12 h-12 rounded-xl bg-[#2a2a2c] flex items-center justify-center text-[#00e65b]">
+            <div class="w-12 h-12 rounded-xl bg-brand-card-high flex items-center justify-center text-brand-primary">
               <span class="material-symbols-outlined text-[28px]">local_fire_department</span>
             </div>
             <h3 class="font-display text-lg uppercase text-white font-bold">Emagrecimento & Definição</h3>
@@ -38,9 +38,9 @@
           </div>
         </div>
 
-        <div class="bg-[#201f21] rounded-xl p-6 flex flex-col justify-between hover:bg-[#2a2a2c] transition-colors border border-[#3c4b3b]/30">
+        <div class="bg-brand-card rounded-xl p-6 flex flex-col justify-between hover:bg-brand-card-high transition-colors border border-[#3c4b3b]/30">
           <div class="space-y-4">
-            <div class="w-12 h-12 rounded-xl bg-[#2a2a2c] flex items-center justify-center text-[#00e65b]">
+            <div class="w-12 h-12 rounded-xl bg-brand-card-high flex items-center justify-center text-brand-primary">
               <span class="material-symbols-outlined text-[28px]">sprint</span>
             </div>
             <h3 class="font-display text-lg uppercase text-white font-bold">Condicionamento Físico</h3>
@@ -48,9 +48,9 @@
           </div>
         </div>
 
-        <div class="bg-[#201f21] rounded-xl p-6 flex flex-col justify-between hover:bg-[#2a2a2c] transition-colors border border-[#3c4b3b]/30">
+        <div class="bg-brand-card rounded-xl p-6 flex flex-col justify-between hover:bg-brand-card-high transition-colors border border-[#3c4b3b]/30">
           <div class="space-y-4">
-            <div class="w-12 h-12 rounded-xl bg-[#2a2a2c] flex items-center justify-center text-[#00e65b]">
+            <div class="w-12 h-12 rounded-xl bg-brand-card-high flex items-center justify-center text-brand-primary">
               <span class="material-symbols-outlined text-[28px]">sports_martial_arts</span>
             </div>
             <h3 class="font-display text-lg uppercase text-white font-bold">Atendimento Personalizado</h3>

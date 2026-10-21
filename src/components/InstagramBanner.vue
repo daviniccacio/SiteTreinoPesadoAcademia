@@ -1,9 +1,9 @@
 <template>
   <section class="w-full py-16 bg-[#0e0e10]">
     <div class="max-w-7xl mx-auto px-4 lg:px-12">
-      <div class="bg-gradient-to-r from-[#201f21] via-[#2a2a2c] to-[#201f21] p-8 lg:p-12 rounded-2xl shadow-2xl flex flex-col lg:flex-row items-center justify-between gap-8 border border-[#3c4b3b]/30">
+      <div class="bg-linear-to-r from-brand-card via-brand-card-high to-brand-card p-8 lg:p-12 rounded-2xl shadow-2xl flex flex-col lg:flex-row items-center justify-between gap-8 border border-[#3c4b3b]/30">
         <div class="space-y-2 text-center lg:text-left max-w-2xl">
-          <div class="inline-flex items-center gap-2 text-[#00e65b] font-display text-xs uppercase tracking-widest bg-[#0e0e10] px-4 py-1 rounded-full border border-[#00e65b]/20">
+          <div class="inline-flex items-center gap-2 text-brand-primary font-display text-xs uppercase tracking-widest bg-[#0e0e10] px-4 py-1 rounded-full border border-brand-primary/20">
             <span class="material-symbols-outlined text-[18px]">photo_camera</span>
             Comunidade no Instagram
           </div>
@@ -19,7 +19,7 @@
           href="https://instagram.com/treinopesadoa" 
           target="_blank" 
           rel="noopener noreferrer"
-          class="inline-flex items-center gap-2 bg-[#00e65b] hover:bg-[#75ff89] text-[#003910] font-display text-sm uppercase px-8 py-4 rounded-xl shadow-[0_0_30px_rgba(0,230,91,0.35)] font-bold transition-all transform hover:scale-105"
+          class="inline-flex items-center gap-2 bg-brand-primary hover:bg-[#75ff89] text-[#003910] font-display text-sm uppercase px-8 py-4 rounded-xl shadow-[0_0_30px_rgba(0,230,91,0.35)] font-bold transition-all transform hover:scale-105"
         >
           <span class="material-symbols-outlined text-[24px]">photo_camera</span>
           <span>Seguir @treinopesadoa</span>
