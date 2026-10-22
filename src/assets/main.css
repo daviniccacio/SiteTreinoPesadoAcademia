@@ -1,18 +1,16 @@
 @import "tailwindcss";
 
 @theme {
-  /* Fontes do projeto */
   --font-sans: 'Inter', sans-serif;
   --font-display: 'Outfit', sans-serif;
 
-  /* Mapeamento de cores do Lovable */
   --color-background: #131315;
   --color-surface: #1b1b1d;
-  --color-border: #2a2a2c;
+  --color-border: #27272a;
   --color-primary: #00e65b;
   --color-primary-foreground: #003910;
   --color-foreground: #ffffff;
-  --color-muted-foreground: #bacbb6;
+  --color-muted-foreground: #a1a1aa;
   --color-secondary: #201f21;
 }
 
@@ -26,7 +24,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-display);
 }
 
-/* Detalhe de listra decorativa verde do Lovable */
+/* Listra Decorativa */
 .stripe {
   background: repeating-linear-gradient(
     -45deg,
@@ -35,4 +33,132 @@ h1, h2, h3, h4, h5, h6 {
     #00b347 10px,
     #00b347 20px
   );
+}
+
+/* --- ANIMAÇÕES PERSONALIZADAS --- */
+
+/* 1. Flutuação suave (para o celular do App) */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+/* 2. Pulso luminoso verde (para os botões CTA principais) */
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(0, 230, 91, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(0, 230, 91, 0.8);
+  }
+}
+
+.animate-glow {
+  animation: pulse-glow 2.5s infinite;
+}
+
+/* 3. Animação suave para expandir/recolher respostas do FAQ */
+.faq-expand-enter-active,
+.faq-expand-leave-active {
+  transition: all 0.3s ease-in-out;
+  max-height: 200px;
+  opacity: 1;
+  overflow: hidden;
+}
+
+.faq-expand-enter-from,
+.faq-expand-leave-to {
+  max-height: 0px;
+  opacity: 0;
+  overflow: hidden;
+}
+
+/* 4. Animação de entrada do Menu Mobile */
+.mobile-menu-enter-active,
+.mobile-menu-leave-active {
+  transition: all 0.25s ease-out;
+}
+
+.mobile-menu-enter-from,
+.mobile-menu-leave-to {
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+/* Habilita o rolamento suave nativo entre as seções/anchors */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+}
+
+/* Listra decorativa verde */
+.stripe {
+  background: repeating-linear-gradient(
+    -45deg,
+    var(--color-primary),
+    var(--color-primary) 10px,
+    #00b347 10px,
+    #00b347 20px
+  );
+}
+
+/* --- CLASSE DE REVELAÇÃO AO ROLAR (SCROLL REVEAL) --- */
+.reveal-element {
+  opacity: 0;
+  transform: translateY(35px);
+  transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1), 
+              transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+/* Estado ativado pelo IntersectionObserver */
+.reveal-element.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* --- ONDA RADIAL NO BOTÃO FLUTUANTE DO WHATSAPP --- */
+@keyframes pulse-ring {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.35);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+}
+
+.animate-pulse-ring {
+}
+
+.animate-pulse-ring::before {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border-radius: 9999px;
+  background-color: var(--color-primary);
+  animation: pulse-ring 2.2s infinite cubic-bezier(0.4, 0, 0.6, 1);
+  z-index: -1;
 }

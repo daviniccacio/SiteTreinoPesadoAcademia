@@ -1,6 +1,6 @@
 <template>
   <section id="planos" class="mx-auto max-w-6xl px-5 py-24">
-    <h2 class="font-display text-4xl uppercase md:text-5xl">Planos</h2>
+    <h2 class="font-display text-4xl font-extrabold uppercase md:text-5xl">Planos</h2>
     <p class="mt-2 text-muted-foreground">Sem taxa de matrícula. Pagou, treinou.</p>
 
     <div class="mt-12 grid gap-4 md:grid-cols-3">

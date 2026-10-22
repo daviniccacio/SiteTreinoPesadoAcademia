@@ -6,14 +6,22 @@
       <div v-for="(item, index) in faqList" :key="index">
         <button 
           @click="toggleFaq(index)" 
-          class="flex w-full items-center justify-between py-5 text-left font-display text-lg font-bold"
+          class="flex w-full items-center justify-between py-5 text-left font-display text-lg font-bold transition-colors hover:text-primary"
         >
           <span>{{ item.question }}</span>
-          <span class="ml-4 text-2xl text-primary">{{ openIndex === index ? '−' : '+' }}</span>
+          <span 
+            class="ml-4 text-2xl text-primary transition-transform duration-300"
+            :class="{ 'rotate-180': openIndex === index }"
+          >
+            {{ openIndex === index ? '−' : '+' }}
+          </span>
         </button>
-        <p v-if="openIndex === index" class="pb-5 text-muted-foreground">
-          {{ item.answer }}
-        </p>
+
+        <Transition name="faq-expand">
+          <p v-if="openIndex === index" class="pb-5 text-muted-foreground">
+            {{ item.answer }}
+          </p>
+        </Transition>
       </div>
     </div>
   </section>
@@ -22,7 +30,7 @@
 <script setup>
 import { ref } from 'vue'
 
-const openIndex = ref(0) // Abre a primeira pergunta por padrão
+const openIndex = ref(0)
 
 const faqList = [
   {
