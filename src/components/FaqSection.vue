@@ -1,42 +1,53 @@
 <template>
-  <section class="w-full py-12 bg-brand-dark">
-    <div class="max-w-4xl mx-auto px-4 lg:px-12 space-y-6">
-      <div class="text-center space-y-1">
-        <h3 class="font-display text-2xl uppercase text-white font-extrabold tracking-wide">Dúvidas Frequentes</h3>
-        <p class="text-xs text-[#bacbb6]">Tudo o que você precisa saber antes de começar</p>
-      </div>
-
-      <div class="space-y-3">
-        <details class="group bg-brand-card p-4 rounded-lg cursor-pointer border border-[#3c4b3b]/30">
-          <summary class="flex justify-between items-center font-display text-sm uppercase text-white font-bold list-none">
-            <span>Preciso pagar taxa de matrícula?</span>
-            <span class="material-symbols-outlined text-brand-primary group-open:rotate-180 transition-transform">expand_more</span>
-          </summary>
-          <p class="text-xs text-[#bacbb6] pt-3 leading-relaxed">
-            Não cobramos taxas de matrícula. Escolha seu plano (Diária, Quinzena ou Mensalidade) e comece imediatamente.
-          </p>
-        </details>
-
-        <details class="group bg-brand-card p-4 rounded-lg cursor-pointer border border-[#3c4b3b]/30">
-          <summary class="flex justify-between items-center font-display text-sm uppercase text-white font-bold list-none">
-            <span>Como tenho acesso ao aplicativo oficial?</span>
-            <span class="material-symbols-outlined text-brand-primary group-open:rotate-180 transition-transform">expand_more</span>
-          </summary>
-          <p class="text-xs text-[#bacbb6] pt-3 leading-relaxed">
-            Ao se matricular, liberamos seu perfil e disponibilizamos o app no Google Play Store.
-          </p>
-        </details>
-
-        <details class="group bg-brand-card p-4 rounded-lg cursor-pointer border border-[#3c4b3b]/30">
-          <summary class="flex justify-between items-center font-display text-sm uppercase text-white font-bold list-none">
-            <span>Quais são os dias e horários de funcionamento?</span>
-            <span class="material-symbols-outlined text-brand-primary group-open:rotate-180 transition-transform">expand_more</span>
-          </summary>
-          <p class="text-xs text-[#bacbb6] pt-3 leading-relaxed">
-            De Segunda a Sexta-feira, das 06:00 às 21:00 sem interrupção.
-          </p>
-        </details>
+  <section id="duvidas" class="mx-auto max-w-3xl px-5 py-24">
+    <h2 class="font-display text-4xl uppercase md:text-5xl">Dúvidas</h2>
+    
+    <div class="mt-10 divide-y divide-border border-y border-border">
+      <div v-for="(item, index) in faqList" :key="index">
+        <button 
+          @click="toggleFaq(index)" 
+          class="flex w-full items-center justify-between py-5 text-left font-display text-lg font-bold"
+        >
+          <span>{{ item.question }}</span>
+          <span class="ml-4 text-2xl text-primary">{{ openIndex === index ? '−' : '+' }}</span>
+        </button>
+        <p v-if="openIndex === index" class="pb-5 text-muted-foreground">
+          {{ item.answer }}
+        </p>
       </div>
     </div>
   </section>
 </template>
+
+<script setup>
+import { ref } from 'vue'
+
+const openIndex = ref(0) // Abre a primeira pergunta por padrão
+
+const faqList = [
+  {
+    question: 'Preciso fazer matrícula?',
+    answer: 'Não. Você paga o plano e já pode começar a treinar no mesmo dia.'
+  },
+  {
+    question: 'Tem professor pra me orientar?',
+    answer: 'Sim, contamos com instrutores para tirar dúvidas, orientar suas séries e auxiliar na execução correta.'
+  },
+  {
+    question: 'Como funciona o aplicativo?',
+    answer: 'Você faz o download na Play Store e recebe o seu acesso para acompanhar seus treinos e fichas de forma digital.'
+  },
+  {
+    question: 'Quais formas de pagamento?',
+    answer: 'Aceitamos Pix, cartões de débito/crédito e dinheiro.'
+  },
+  {
+    question: 'Posso fazer só uma diária pra testar?',
+    answer: 'Com certeza! A diária custa apenas R$10 e dá acesso completo aos equipamentos no dia.'
+  }
+]
+
+function toggleFaq(index) {
+  openIndex.value = openIndex.value === index ? -1 : index
+}
+</script>

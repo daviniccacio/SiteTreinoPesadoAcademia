@@ -1,100 +1,50 @@
 <template>
-  <section id="aplicativo" class="w-full py-16 bg-brand-dark relative overflow-hidden">
-    <div class="absolute -left-48 top-1/2 -translate-y-1/2 w-96 h-96 bg-brand-primary/10 rounded-full blur-3xl pointer-events-none"></div>
-    <div class="max-w-7xl mx-auto px-4 lg:px-12">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-        <!-- Esquerda: Informações -->
-        <div class="lg:col-span-7 space-y-6">
-          <div class="space-y-2">
-            <div class="inline-flex items-center gap-2 bg-brand-card px-4 py-1 rounded-full border border-brand-primary/20">
-              <span class="material-symbols-outlined text-brand-primary text-[18px]">smartphone</span>
-              <span class="font-display text-xs uppercase tracking-widest text-brand-primary font-bold">Tecnologia Própria</span>
-            </div>
-            <h2 class="font-display text-3xl sm:text-4xl uppercase text-white font-extrabold tracking-wide">
-              Treine com o App Oficial da Treino Pesado
-            </h2>
-            <p class="text-base text-[#bacbb6] leading-relaxed">
-              Diga adeus às fichas de papel rasgadas. Tenha seu programa de treino individualizado, histórico de cargas e notificações da academia direto no seu Android.
-            </p>
-          </div>
+  <section id="app" class="border-y border-border bg-surface">
+    <div class="mx-auto grid max-w-6xl items-center gap-12 px-5 py-24 md:grid-cols-2">
+      <!-- Esquerda: Texto e Botão da Store -->
+      <div>
+        <p class="text-sm font-bold uppercase tracking-widest text-primary">Aplicativo oficial</p>
+        <h2 class="mt-3 font-display text-4xl uppercase md:text-5xl">Seu treino no bolso</h2>
+        <p class="mt-5 text-muted-foreground">
+          Com o app da Treino Pesado você acompanha seus treinos, fica por dentro dos avisos da academia e não perde o foco nem fora dela.
+        </p>
+        
+        <ul class="mt-6 space-y-3">
+          <li class="flex items-center gap-3">
+            <span class="h-2 w-2 bg-primary"></span>Fichas de treino sempre à mão
+          </li>
+          <li class="flex items-center gap-3">
+            <span class="h-2 w-2 bg-primary"></span>Avisos e novidades da academia
+          </li>
+          <li class="flex items-center gap-3">
+            <span class="h-2 w-2 bg-primary"></span>Acompanhe sua evolução
+          </li>
+        </ul>
 
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <div class="bg-brand-card p-4 rounded-lg space-y-1 border border-[#3c4b3b]/30">
-              <div class="flex items-center gap-2">
-                <span class="material-symbols-outlined text-brand-primary text-[22px]">history_edu</span>
-                <h4 class="font-display text-sm uppercase text-white font-bold">Ficha Digital</h4>
-              </div>
-              <p class="text-xs text-[#bacbb6]">Exercícios, séries e repetições organizados para você.</p>
-            </div>
+        <a 
+          href="https://play.google.com/store/apps/details?id=com.daviniccacio.treinopesado" 
+          target="_blank" 
+          rel="noreferrer" 
+          class="mt-8 inline-flex items-center gap-3 rounded-sm bg-foreground px-5 py-3 text-background transition hover:opacity-90"
+        >
+          <svg viewBox="0 0 24 24" class="h-7 w-7 fill-current">
+            <path d="M3.6 1.8 13.8 12 3.6 22.2c-.4-.2-.6-.6-.6-1.1V2.9c0-.5.2-.9.6-1.1Zm11.3 11.3 2.4 2.4-11 6.3 8.6-8.7Zm3.6-3.6 2.8 1.6c.8.5.8 1.4 0 1.9l-2.8 1.6-2.6-2.6 2.6-2.5ZM6.3 2.2l11 6.3-2.4 2.4-8.6-8.7Z"></path>
+          </svg>
+          <span class="text-left leading-tight">
+            <span class="block text-[10px] uppercase">Disponível no</span>
+            <span class="font-display text-lg font-bold">Google Play</span>
+          </span>
+        </a>
+      </div>
 
-            <div class="bg-brand-card p-4 rounded-lg space-y-1 border border-[#3c4b3b]/30">
-              <div class="flex items-center gap-2">
-                <span class="material-symbols-outlined text-brand-primary text-[22px]">trending_up</span>
-                <h4 class="font-display text-sm uppercase text-white font-bold">Histórico de Cargas</h4>
-              </div>
-              <p class="text-xs text-[#bacbb6]">Acompanhe sua progressão de carga semanalmente.</p>
-            </div>
-
-            <div class="bg-brand-card p-4 rounded-lg space-y-1 border border-[#3c4b3b]/30">
-              <div class="flex items-center gap-2">
-                <span class="material-symbols-outlined text-brand-primary text-[22px]">timer</span>
-                <h4 class="font-display text-sm uppercase text-white font-bold">Cronômetro de Descanso</h4>
-              </div>
-              <p class="text-xs text-[#bacbb6]">Controle o tempo entre séries com alertas sonoros.</p>
-            </div>
-
-            <div class="bg-brand-card p-4 rounded-lg space-y-1 border border-[#3c4b3b]/30">
-              <div class="flex items-center gap-2">
-                <span class="material-symbols-outlined text-brand-primary text-[22px]">notifications_active</span>
-                <h4 class="font-display text-sm uppercase text-white font-bold">Avisos em Tempo Real</h4>
-              </div>
-              <p class="text-xs text-[#bacbb6]">Fique por dentro de avisos e comunicados da academia.</p>
-            </div>
-          </div>
-
-          <div class="pt-2 flex flex-wrap items-center gap-4">
-            <a 
-              href="https://play.google.com/store/apps/details?id=com.daviniccacio.treinopesado" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              class="inline-flex items-center gap-4 bg-brand-card-high hover:bg-[#353437] px-6 py-3 rounded-xl transition-all shadow-lg border border-[#3c4b3b] hover:border-brand-primary"
-            >
-              <svg class="w-8 h-8 text-brand-primary" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M3.609 1.814L13.792 12 3.61 22.186c-.378-.403-.61-.954-.61-1.579V3.393c0-.625.232-1.176.61-1.579zm1.44-.946L16.29 7.155 14.5 11.29 5.049.868zm11.241 10.424l3.963 2.278c1.034.594 1.034 1.56 0 2.154l-3.963 2.278-2.499-2.355 2.5-4.355zM5.05 23.132l9.45-10.422 1.79 4.135-11.24 6.287z"></path>
-              </svg>
-              <div class="flex flex-col text-left">
-                <span class="font-display text-[11px] text-[#bacbb6] uppercase tracking-widest leading-none">Disponível no</span>
-                <span class="font-display text-base text-white font-bold leading-tight">Google Play Store</span>
-              </div>
-            </a>
-          </div>
-        </div>
-
-        <!-- Direita: Mockup do App -->
-        <div class="lg:col-span-5 flex justify-center">
-          <div class="relative w-full max-w-[320px] bg-[#0e0e10] rounded-[2.5rem] p-4 shadow-2xl border border-brand-card-high">
-            <div class="w-full bg-brand-card-high rounded-4xl p-4 flex flex-col gap-3 border border-[#3c4b3b]/30">
-              <div class="flex items-center justify-between pb-2">
-                <span class="font-display text-sm uppercase text-white font-bold">Treino Pesado</span>
-                <span class="material-symbols-outlined text-brand-primary text-[20px]">notifications</span>
-              </div>
-
-              <div class="bg-[#0e0e10] p-3 rounded-xl border border-[#3c4b3b]/30">
-                <div class="flex justify-between items-center mb-1">
-                  <span class="font-display text-[11px] uppercase text-brand-primary font-bold">Treino A • Hipertrofia</span>
-                  <span class="bg-brand-primary/20 text-brand-primary text-[10px] px-2 py-0.5 rounded font-bold uppercase">Ativo</span>
-                </div>
-                <p class="font-display text-sm text-white font-bold uppercase">Peito & Tríceps Pesado</p>
-              </div>
-
-              <div class="bg-brand-card p-3 rounded-xl flex items-center justify-between">
-                <div>
-                  <h5 class="font-display text-xs text-white uppercase font-bold">Supino Reto Barra</h5>
-                  <p class="text-[11px] text-[#bacbb6]">4x 8-10 reps • <span class="text-brand-primary font-bold">110 kg</span></p>
-                </div>
-                <span class="material-symbols-outlined text-brand-primary text-[18px]">verified</span>
-              </div>
-            </div>
+      <!-- Direita: Mockup do Smartphone -->
+      <div class="flex justify-center">
+        <div class="relative h-[480px] w-[240px] rounded-[2.5rem] border-[10px] border-secondary bg-background p-5 shadow-2xl">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCN_9vT5wwOS8mQhgSZRx0OaDqXOsn_anJOuCU-NmBU-qPC13wrqLb-l1idvgdDw1nmET6WbouUdEuRn0AtrGTpLG4R9LaCTvyoopKMg2M0gdLGHBdP1sCajVvSz6UQZ6tUYDELRxDcbjJyXW6nzjEu6y34aiHvE-b1ik7fWbTuWShMrmuVCBQAwEYRJy7mZjmn3CjufQ115qxgAF2E7mK0WrglzR313RWcCF5JmGex0RlVj0FLDygmtj8LS_ohn5IElk" alt="Logo" class="mx-auto mt-6 w-32" />
+          <div class="mt-8 space-y-3">
+            <div class="rounded-sm p-3 text-sm font-bold bg-primary text-primary-foreground">Treino A — Peito</div>
+            <div class="rounded-sm p-3 text-sm font-bold bg-surface">Treino B — Costas</div>
+            <div class="rounded-sm p-3 text-sm font-bold bg-surface">Treino C — Perna</div>
           </div>
         </div>
       </div>

@@ -1,29 +1,29 @@
 <template>
-  <div class="min-h-screen bg-brand-dark text-[#e5e1e4]">
+  <div class="min-h-screen bg-background text-foreground">
     <Navbar />
     <main>
       <HeroSection />
-      <StatsTicker />
       <PricingSection />
       <AppShowcase />
-      <StructureSection />
-      <LocationSection />
+      <ReviewsSection />
       <InstagramBanner />
       <FaqSection />
+      <LocationSection />
     </main>
     <FooterSection />
+    <FloatingWhatsapp />
   </div>
 </template>
 
 <script setup>
 import Navbar from '../components/NavBar.vue'
 import HeroSection from '../components/HeroSection.vue'
-import StatsTicker from '../components/StatsTicker.vue'
 import PricingSection from '../components/PricingSection.vue'
 import AppShowcase from '../components/AppShowcase.vue'
-import StructureSection from '../components/StructureSection.vue'
-import LocationSection from '../components/LocationSection.vue'
+import ReviewsSection from '../components/ReviewsSection.vue'
 import InstagramBanner from '../components/InstagramBanner.vue'
 import FaqSection from '../components/FaqSection.vue'
+import LocationSection from '../components/LocationSection.vue'
 import FooterSection from '../components/Footer.vue'
+import FloatingWhatsapp from '../components/FloatingWhatsapp.vue'
 </script>

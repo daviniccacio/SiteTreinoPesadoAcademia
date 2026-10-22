@@ -1,38 +1,35 @@
 <template>
-  <header class="fixed top-0 w-full z-50 bg-brand-dark/90 backdrop-blur-md border-b border-brand-card-high shadow-[0_1px_12px_rgba(0,0,0,0.7)]">
-    <div class="h-20 max-w-7xl mx-auto px-4 lg:px-12 flex items-center justify-between gap-4">
-      <div class="flex items-center gap-4 shrink-0">
-        <img 
-          src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCN_9vT5wwOS8mQhgSZRx0OaDqXOsn_anJOuCU-NmBU-qPC13wrqLb-l1idvgdDw1nmET6WbouUdEuRn0AtrGTpLG4R9LaCTvyoopKMg2M0gdLGHBdP1sCajVvSz6UQZ6tUYDELRxDcbjJyXW6nzjEu6y34aiHvE-b1ik7fWbTuWShMrmuVCBQAwEYRJy7mZjmn3CjufQ115qxgAF2E7mK0WrglzR313RWcCF5JmGex0RlVj0FLDygmtj8LS_ohn5IElk" 
-          alt="Treino Pesado Logo" 
-          class="h-12 md:h-14 w-auto object-contain" 
-        />
-        <div class="flex flex-col">
-          <span class="font-display text-lg uppercase text-brand-primary tracking-wider font-bold">Treino Pesado</span>
-          <span class="font-display text-xs text-[#bacbb6] uppercase tracking-widest hidden sm:inline">São Mateus do Maranhão</span>
-        </div>
-      </div>
+  <header class="fixed inset-x-0 top-0 z-50 border-b border-border bg-background/90 backdrop-blur">
+    <div class="mx-auto flex h-16 max-w-6xl items-center justify-between px-5">
+      <!-- Logo da Academia -->
+      <a href="#topo" class="flex items-center gap-3">
+        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCN_9vT5wwOS8mQhgSZRx0OaDqXOsn_anJOuCU-NmBU-qPC13wrqLb-l1idvgdDw1nmET6WbouUdEuRn0AtrGTpLG4R9LaCTvyoopKMg2M0gdLGHBdP1sCajVvSz6UQZ6tUYDELRxDcbjJyXW6nzjEu6y34aiHvE-b1ik7fWbTuWShMrmuVCBQAwEYRJy7mZjmn3CjufQ115qxgAF2E7mK0WrglzR313RWcCF5JmGex0RlVj0FLDygmtj8LS_ohn5IElk" alt="Treino Pesado Academia" class="h-11 w-auto" />
+        <span class="hidden font-display text-lg font-black uppercase sm:block">
+          Treino <span class="text-primary">Pesado</span>
+        </span>
+      </a>
 
-      <nav class="hidden xl:flex items-center gap-6">
-        <a href="#planos" class="uppercase tracking-wider transition-colors py-1 px-4 bg-brand-primary text-[#003910] font-display text-sm rounded-lg font-bold shadow-[0_0_15px_rgba(0,230,91,0.35)]">
-          Planos & Preços
+      <!-- Menu de Navegação Desktop -->
+      <nav class="hidden items-center gap-7 text-sm md:flex">
+        <a href="#planos" class="text-muted-foreground transition hover:text-primary">Planos</a>
+        <a href="#app" class="text-muted-foreground transition hover:text-primary">App</a>
+        <a href="#avaliacoes" class="text-muted-foreground transition hover:text-primary">Avaliações</a>
+        <a href="#duvidas" class="text-muted-foreground transition hover:text-primary">Dúvidas</a>
+        <a href="#local" class="text-muted-foreground transition hover:text-primary">Onde estamos</a>
+        <a 
+          href="https://wa.me/5585900000000?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20a%20Treino%20Pesado" 
+          target="_blank" 
+          rel="noreferrer" 
+          class="rounded-sm bg-primary px-4 py-2 font-bold text-primary-foreground transition hover:opacity-90"
+        >
+          Chamar no Zap
         </a>
-        <a href="#estrutura" class="font-display text-sm uppercase tracking-wider text-[#bacbb6] hover:text-brand-primary transition-colors py-1 px-2">Estrutura</a>
-        <a href="#aplicativo" class="font-display text-sm uppercase tracking-wider text-[#bacbb6] hover:text-brand-primary transition-colors py-1 px-2">Aplicativo Oficial</a>
-        <a href="#localizacao" class="font-display text-sm uppercase tracking-wider text-[#bacbb6] hover:text-brand-primary transition-colors py-1 px-2">Localização & Horários</a>
       </nav>
 
-      <div class="flex items-center gap-4 shrink-0">
-        <a 
-          href="https://play.google.com/store/apps/details?id=com.daviniccacio.treinopesado" 
-          target="_blank" 
-          rel="noopener noreferrer"
-          class="inline-flex items-center justify-center gap-2 bg-brand-primary hover:bg-[#75ff89] text-[#003910] font-display text-sm uppercase px-6 py-2 rounded-lg transition-all duration-300 shadow-[0_0_22px_rgba(0,230,91,0.4)] hover:shadow-[0_0_30px_rgba(0,230,91,0.6)] font-bold"
-        >
-          <span class="material-symbols-outlined text-[18px]">android</span>
-          <span>Baixar App</span>
-        </a>
-      </div>
+      <!-- Botão Menu Mobile -->
+      <button class="md:hidden font-display font-bold uppercase text-primary" aria-label="Menu">
+        Menu
+      </button>
     </div>
   </header>
 </template>

@@ -1,46 +1,39 @@
 <template>
-  <footer class="w-full bg-[#0e0e10] text-[#e5e1e4] py-12 border-t border-brand-card-high">
-    <div class="max-w-7xl mx-auto px-4 lg:px-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-      <div class="flex flex-col gap-4">
-        <div class="flex items-center gap-2">
-          <span class="font-display text-lg uppercase text-brand-primary tracking-wider font-bold">Treino Pesado</span>
-        </div>
-        <p class="text-xs text-[#bacbb6] leading-relaxed">
-          Força bruta, disciplina e alta performance em São Mateus do Maranhão.
-        </p>
+  <footer class="border-t border-border">
+    <div class="stripe h-2"></div>
+    <div class="mx-auto grid max-w-6xl gap-10 px-5 py-14 md:grid-cols-3">
+      <!-- Coluna 1: Logo -->
+      <div>
+        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCN_9vT5wwOS8mQhgSZRx0OaDqXOsn_anJOuCU-NmBU-qPC13wrqLb-l1idvgdDw1nmET6WbouUdEuRn0AtrGTpLG4R9LaCTvyoopKMg2M0gdLGHBdP1sCajVvSz6UQZ6tUYDELRxDcbjJyXW6nzjEu6y34aiHvE-b1ik7fWbTuWShMrmuVCBQAwEYRJy7mZjmn3CjufQ115qxgAF2E7mK0WrglzR313RWcCF5JmGex0RlVj0FLDygmtj8LS_ohn5IElk" alt="Treino Pesado Academia" class="h-24 w-auto" loading="lazy" />
+        <p class="mt-4 text-sm text-muted-foreground">Academia raiz, treino de verdade.</p>
       </div>
 
-      <div class="flex flex-col gap-2">
-        <h4 class="font-display text-sm uppercase text-brand-primary tracking-wider font-bold">Localização</h4>
-        <p class="text-xs text-[#bacbb6]">
-          Rua Santo Antônio, 19<br/>
-          São Mateus do Maranhão - MA<br/>
-          CEP: 65470-000
-        </p>
+      <!-- Coluna 2: Navegação -->
+      <div>
+        <h3 class="font-display text-sm uppercase tracking-widest text-primary">Navegue</h3>
+        <ul class="mt-4 space-y-2 text-sm">
+          <li><a href="#planos" class="hover:text-primary">Planos</a></li>
+          <li><a href="#app" class="hover:text-primary">App</a></li>
+          <li><a href="#avaliacoes" class="hover:text-primary">Avaliações</a></li>
+          <li><a href="#duvidas" class="hover:text-primary">Dúvidas</a></li>
+          <li><a href="#local" class="hover:text-primary">Onde estamos</a></li>
+        </ul>
       </div>
 
-      <div class="flex flex-col gap-2">
-        <h4 class="font-display text-sm uppercase text-brand-primary tracking-wider font-bold">Horários</h4>
-        <p class="text-xs text-[#bacbb6]">Segunda a Sexta: <span class="text-brand-primary font-bold">06:00 às 21:00</span></p>
-        <p class="text-xs text-[#bacbb6]">Sáb/Dom/Feriados: Fechado</p>
-      </div>
-
-      <div class="flex flex-col gap-2">
-        <h4 class="font-display text-sm uppercase text-brand-primary tracking-wider font-bold">App Oficial</h4>
-        <a 
-          href="https://play.google.com/store/apps/details?id=com.daviniccacio.treinopesado" 
-          target="_blank" 
-          rel="noopener noreferrer" 
-          class="text-xs text-brand-primary hover:underline"
-        >
-          Baixar na Google Play Store →
-        </a>
+      <!-- Coluna 3: Contato -->
+      <div>
+        <h3 class="font-display text-sm uppercase tracking-widest text-primary">Contato</h3>
+        <ul class="mt-4 space-y-2 text-sm">
+          <li><a href="https://wa.me/5585900000000?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20a%20Treino%20Pesado" target="_blank" rel="noreferrer" class="hover:text-primary">WhatsApp</a></li>
+          <li><a href="https://www.instagram.com/treinopesadoa/" target="_blank" rel="noreferrer" class="hover:text-primary">Instagram @treinopesadoa</a></li>
+          <li><a href="https://play.google.com/store/apps/details?id=com.daviniccacio.treinopesado" target="_blank" rel="noreferrer" class="hover:text-primary">App na Play Store</a></li>
+          <li><a href="https://share.google/WnMKkkIYJaTxqVCL6" target="_blank" rel="noreferrer" class="hover:text-primary">Como chegar</a></li>
+        </ul>
       </div>
     </div>
 
-    <div class="max-w-7xl mx-auto px-4 lg:px-12 mt-12 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#bacbb6] border-t border-brand-card-high">
-      <p>© 2026 Academia Treino Pesado. Todos os direitos reservados.</p>
-      <p class="font-display text-brand-primary font-bold uppercase">Construído para quem não desiste</p>
+    <div class="border-t border-border py-6 text-center text-xs text-muted-foreground">
+      © 2026 Treino Pesado Academia. Todos os direitos reservados.
     </div>
   </footer>
 </template>
