@@ -24,11 +24,11 @@
       </div>
 
       <div class="reveal-element">
-        <FaqSection />
-      </div>
-
-      <div class="reveal-element">
         <LocationSection />
+      </div>
+      
+      <div class="reveal-element">
+        <FaqSection />
       </div>
     </main>
 

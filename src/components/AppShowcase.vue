@@ -1,5 +1,5 @@
 <template>
-  <section id="app" class="border-y border-border bg-surface">
+  <section id="aplicativo" class="border-y border-border bg-surface">
     <div class="mx-auto grid max-w-6xl items-center gap-12 px-5 py-24 md:grid-cols-2">
       <!-- Esquerda: Texto e Botão -->
       <div>
