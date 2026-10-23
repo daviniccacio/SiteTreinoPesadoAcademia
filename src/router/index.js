@@ -1,9 +1,10 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
-// Importação das rotas (pode usar lazy loading com import() dinâmico)
-import HomeView from '@/views/HomeView.vue' // ou seu componente principal do site
+// Importação das páginas da aplicação
+import HomeView from '@/views/HomeView.vue'
 import PrivacyPolicyView from '@/views/PrivacyPolicyView.vue'
 import DeleteAccountView from '@/views/DeleteAccountView.vue'
+import NotFoundView from '@/views/NotFoundView.vue'
 
 const routes = [
   {
@@ -20,13 +21,18 @@ const routes = [
     path: '/exclusao-de-conta',
     name: 'delete-account',
     component: DeleteAccountView
+  },
+  // ROTA CATCH-ALL (Captura qualquer URL que não coincida com as rotas acima)
+  {
+    path: '/:pathMatch(.*)*',
+    name: 'not-found',
+    component: NotFoundView
   }
 ]
 
 const router = createRouter({
   history: createWebHistory(),
   routes,
-  // Garante que a página sempre abra no topo ao trocar de rota
   scrollBehavior() {
     return { top: 0 }
   }

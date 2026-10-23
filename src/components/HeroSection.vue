@@ -21,7 +21,7 @@
       />
     </picture>
 
-    <div class="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent"></div>
+    <div class="absolute inset-0 bg-linear-to-t from-background via-background/60 to-transparent"></div>
 
     <!-- Conteúdo Principal -->
     <div class="relative mx-auto w-full max-w-6xl px-5 pb-20">

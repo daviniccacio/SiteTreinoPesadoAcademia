@@ -61,17 +61,17 @@
       </div>
 
       <!-- Direita: Apresentação Tripla dos Celulares -->
-      <div class="group relative flex min-h-[540px] items-center justify-center cursor-pointer"
+      <div class="group relative flex min-h-135 items-center justify-center cursor-pointer"
         @mouseenter="isHovered = true" @mouseleave="isHovered = false">
 
         <!-- 1. CELULAR DA ESQUERDA -->
         <div
-          class="absolute z-10 h-[440px] w-[220px] rounded-[2.5rem] border-[6px] border-secondary bg-background p-2 shadow-xl transition-all duration-700 ease-in-out"
+          class="absolute z-10 h-110 w-55 rounded-[2.5rem] border-[6px] border-secondary bg-background p-2 shadow-xl transition-all duration-700 ease-in-out"
           :class="(isRevealed || isHovered)
             ? 'opacity-90 -translate-x-28 md:-translate-x-36 -rotate-12 scale-90'
             : 'opacity-0 translate-x-0 rotate-0 scale-75 pointer-events-none'">
           <div class="absolute top-3 left-1/2 -translate-x-1/2 h-3 w-12 rounded-full bg-secondary z-20"></div>
-          <div class="h-full w-full overflow-hidden rounded-[2rem] bg-[#f8f9fa] flex items-center justify-center">
+          <div class="h-full w-full overflow-hidden rounded-4xl bg-[#f8f9fa] flex items-center justify-center">
             <img :src="appPrintLeftImg || appPrint" alt="Tela secundária do app - Treino Pesado"
               class="h-full w-full object-contain object-center" loading="lazy" decoding="async" width="220" height="440" />
           </div>
@@ -79,7 +79,7 @@
 
         <!-- 2. CELULAR PRINCIPAL (Centro) -->
         <div
-          class="animate-float relative z-20 h-[520px] w-[260px] rounded-[3rem] border-[8px] border-secondary bg-background p-2.5 shadow-2xl transition-all duration-300">
+          class="animate-float relative z-20 h-130 w-65 rounded-[3rem] border-8 border-secondary bg-background p-2.5 shadow-2xl transition-all duration-300">
           <div class="absolute top-3.5 left-1/2 -translate-x-1/2 h-3.5 w-16 rounded-full bg-secondary z-20"></div>
           <div class="h-full w-full overflow-hidden rounded-[2.2rem] bg-[#f8f9fa] flex items-center justify-center">
             <img :src="appPrint" alt="Tela principal do app - Treino Pesado Academia"
@@ -89,12 +89,12 @@
 
         <!-- 3. CELULAR DA DIREITA -->
         <div
-          class="absolute z-10 h-[440px] w-[220px] rounded-[2.5rem] border-[6px] border-secondary bg-background p-2 shadow-xl transition-all duration-700 ease-in-out"
+          class="absolute z-10 h-110 w-55 rounded-[2.5rem] border-[6px] border-secondary bg-background p-2 shadow-xl transition-all duration-700 ease-in-out"
           :class="(isRevealed || isHovered)
             ? 'opacity-90 translate-x-28 md:translate-x-36 rotate-12 scale-90'
             : 'opacity-0 translate-x-0 rotate-0 scale-75 pointer-events-none'">
           <div class="absolute top-3 left-1/2 -translate-x-1/2 h-3 w-12 rounded-full bg-secondary z-20"></div>
-          <div class="h-full w-full overflow-hidden rounded-[2rem] bg-[#f8f9fa] flex items-center justify-center">
+          <div class="h-full w-full overflow-hidden rounded-4xl bg-[#f8f9fa] flex items-center justify-center">
             <img :src="appPrintRightImg || appPrint" alt="Tela secundária do app - Treino Pesado"
               class="h-full w-full object-contain object-center" loading="lazy" decoding="async" width="220" height="440" />
           </div>

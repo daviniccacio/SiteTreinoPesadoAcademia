@@ -1,0 +1,6 @@
+# Permite que todos os motores de busca (crawlers) indexem o site inteiro
+User-agent: *
+Allow: /
+
+# Descomenta a linha abaixo e insere o teu domínio real quando o site estiver online
+# Sitemap: https://treinopesadoacademia.com.br/sitemap.xml

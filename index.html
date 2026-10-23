@@ -5,14 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Treino Pesado Academia | São Mateus do Maranhão</title>
 
-    <!-- 1. Conexão antecipada com os servidores do Google Fonts -->
+    <!-- 1. META DESCRIPTION (Resolve o erro do Lighthouse) -->
+    <meta 
+      name="description" 
+      content="Treino Pesado Academia em São Mateus do Maranhão. Estrutura completa, equipamentos modernos, fichas 100% digitais no app e mensalidade por apenas R$ 80." 
+    />
+
+    <!-- 2. OPEN GRAPH (Otimização para partilha no WhatsApp e Redes Sociais) -->
+    <meta property="og:title" content="Treino Pesado Academia | São Mateus do Maranhão" />
+    <meta property="og:description" content="Estrutura completa, galera que treina sério e preço que cabe no bolso. Mensalidade por apenas R$ 80." />
+    <meta property="og:image" content="/assets/img/logo-treino-pesado-icon.png" />
+    <meta property="og:type" content="website" />
+
+    <!-- 3. DECLARAÇÃO DO FAVICON -->
+    <link rel="icon" type="image/png" href="/assets/img/logo-treino-pesado-icon.png" />
+
+    <!-- 4. Conexão antecipada com os servidores do Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-    <!-- 2. MODULEPRELOAD: Carregamento do JS principal em paralelo -->
+    <!-- 5. MODULEPRELOAD: Carregamento do JS principal em paralelo -->
     <link rel="modulepreload" href="/src/main.js" />
 
-    <!-- 3. PRELOAD RESPONSIVO DA IMAGEM LCP (Garante download prioritário no mobile e desktop) -->
+    <!-- 6. PRELOAD RESPONSIVO DA IMAGEM LCP -->
     <link
       rel="preload"
       as="image"
@@ -30,7 +45,7 @@
       fetchpriority="high"
     />
 
-    <!-- 4. CARREGAMENTO ASSÍNCRONO DAS FONTES -->
+    <!-- 7. CARREGAMENTO ASSÍNCRONO DAS FONTES -->
     <link
       rel="preload"
       as="style"

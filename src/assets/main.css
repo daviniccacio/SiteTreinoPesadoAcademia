@@ -171,3 +171,13 @@ h1, h2, h3, h4, h5, h6 {
   clip-path: inset(0 0 0 0);
   transform: scale(1);
 }
+
+/* Otimização de Performance de Layout para a Thread Principal */
+#planos,
+#aplicativo,
+#avaliacoes,
+#duvidas,
+#local {
+  content-visibility: auto;
+  contain-intrinsic-size: 1px 800px;
+}

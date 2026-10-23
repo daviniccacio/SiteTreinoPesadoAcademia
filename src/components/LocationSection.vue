@@ -58,7 +58,7 @@
           <iframe 
             title="Mapa da Treino Pesado Academia" 
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7761.0662944912665!2d-44.481039787429715!3d-4.031016005734605!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x78afc06ea42294d%3A0xf491983484ce08d4!2sTreino%20Pesado%20Academia!5e0!3m2!1spt-BR!2sbr!4v1792687527230!5m2!1spt-BR!2sbr" 
-            class="h-[400px] w-full rounded-2xl border border-border grayscale transition-all duration-300 hover:grayscale-0 shadow-xl" 
+            class="h-100 w-full rounded-2xl border border-border grayscale transition-all duration-300 hover:grayscale-0 shadow-xl" 
             loading="lazy"
             referrerpolicy="strict-origin-when-cross-origin"
           ></iframe>

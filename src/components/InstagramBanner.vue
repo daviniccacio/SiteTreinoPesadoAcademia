@@ -8,7 +8,7 @@
             Faça parte do <span class="text-primary">movimento</span>
           </h2>
           <p class="text-xs md:text-sm text-muted-foreground leading-relaxed">
-            Siga o perfil oficial <span class="font-mono font-bold text-foreground text-primary">@treinopesadoa</span> para não perder avisos de horários, dicas e a rotina da academia.
+            Siga o perfil oficial <span class="font-mono font-bold text-primary">@treinopesadoa</span> para não perder avisos de horários, dicas e a rotina da academia.
           </p>
         </div>
 
