@@ -108,54 +108,47 @@ const navItems = [
   { id: 'duvidas', label: 'Dúvidas', href: '#duvidas' }
 ]
 
-// Trava lógica para evitar chamadas duplicadas por frame
-let ticking = false
+let sectionObserver = null
 
-function updateScrollState() {
-  // 1. Alterna o estado da navbar retrátil
-  isScrolled.value = window.scrollY > 50
-
-  // 2. Se estiver no topo, limpa os destaques
-  if (window.scrollY < 150) {
-    activeSection.value = ''
-    ticking = false
-    return
-  }
-
-  // 3. Identifica a seção ativa
-  const triggerPoint = 200
-  let currentActive = ''
-
-  for (const item of navItems) {
-    const element = document.getElementById(item.id)
-    if (element) {
-      const rect = element.getBoundingClientRect()
-      if (rect.top <= triggerPoint && rect.bottom > triggerPoint) {
-        currentActive = item.id
-        break
-      }
-    }
-  }
-
-  activeSection.value = currentActive
-  ticking = false
-}
-
-// Handler otimizado com requestAnimationFrame (Aceleração por Hardware)
+// 1. Função de scroll ultraleve: apenas altera o booleano sem ler a geometria do DOM
 function onScroll() {
-  if (!ticking) {
-    window.requestAnimationFrame(updateScrollState)
-    ticking = true
-  }
+  isScrolled.value = window.scrollY > 50
 }
 
 onMounted(() => {
-  updateScrollState()
+  // Escuta o scroll com passive: true para melhor performance
   window.addEventListener('scroll', onScroll, { passive: true })
+
+  // 2. IntersectionObserver nativo para identificar a seção ativa sem causar Forced Reflow
+  sectionObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          activeSection.value = entry.target.id
+        }
+      })
+    },
+    {
+      // Considera a seção ativa quando ela ocupa a área central/superior da tela
+      rootMargin: '-20% 0px -60% 0px',
+      threshold: 0
+    }
+  )
+
+  // Registra a observação em cada seção
+  navItems.forEach((item) => {
+    const element = document.getElementById(item.id)
+    if (element) {
+      sectionObserver.observe(element)
+    }
+  })
 })
 
 onUnmounted(() => {
   window.removeEventListener('scroll', onScroll)
+  if (sectionObserver) {
+    sectionObserver.disconnect()
+  }
 })
 </script>
 

@@ -1,28 +1,76 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR" class="dark">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Treino Pesado Academia | São Mateus do Maranhão</title>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Treino Pesado Academia | São Mateus do Maranhão</title>
 
-  <!-- 1. Preconnect para conectar antecipadamente aos servidores de fontes -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- 1. Conexão antecipada com os servidores do Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-  <!-- 2. Carregamento assíncrono das fontes (evita bloquear a renderização inicial) -->
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800;900&display=swap" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800;900&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+    <!-- 2. MODULEPRELOAD: Carregamento do JS principal em paralelo -->
+    <link rel="modulepreload" href="/src/main.js" />
 
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" />
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+    <!-- 3. PRELOAD RESPONSIVO DA IMAGEM LCP (Garante download prioritário no mobile e desktop) -->
+    <link
+      rel="preload"
+      as="image"
+      href="/assets/img/fotoacademia1-mobile.webp"
+      type="image/webp"
+      media="(max-width: 768px)"
+      fetchpriority="high"
+    />
+    <link
+      rel="preload"
+      as="image"
+      href="/assets/img/fotoacademia1.webp"
+      type="image/webp"
+      media="(min-width: 769px)"
+      fetchpriority="high"
+    />
 
-  <!-- 3. Preload correto da imagem LCP (sem o prefixo /public/) -->
-  <link rel="preload" as="image" href="/assets/img/fotoacademia1.webp" type="image/webp" fetchpriority="high" />
-</head>
-<body class="bg-brand-dark text-[#e5e1e4] antialiased selection:bg-brand-primary selection:text-primary">
-  <div id="app"></div>
-  
-  <!-- Entrypoint do Vue 3 / Vite -->
-  <script type="module" src="/src/main.js"></script>
-</body>
+    <!-- 4. CARREGAMENTO ASSÍNCRONO DAS FONTES -->
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800;900&display=swap"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800;900&display=swap"
+      rel="stylesheet"
+      media="print"
+      onload="this.media = 'all'"
+    />
+
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+      rel="stylesheet"
+      media="print"
+      onload="this.media = 'all'"
+    />
+
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800;900&display=swap"
+        rel="stylesheet"
+      />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet"
+      />
+    </noscript>
+  </head>
+  <body
+    class="bg-brand-dark text-[#e5e1e4] antialiased selection:bg-brand-primary selection:text-primary"
+  >
+    <div id="app"></div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
 </html>

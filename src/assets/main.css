@@ -1,5 +1,6 @@
 @import "tailwindcss";
 
+/* --- DEFINIÇÃO DE TEMA (TAILWIND V4) --- */
 @theme {
   --font-sans: 'Inter', sans-serif;
   --font-display: 'Outfit', sans-serif;
@@ -12,6 +13,11 @@
   --color-foreground: #ffffff;
   --color-muted-foreground: #a1a1aa;
   --color-secondary: #201f21;
+}
+
+/* --- ESTILOS BASE E RESETS GLOBAIS --- */
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -93,33 +99,7 @@ h1, h2, h3, h4, h5, h6 {
   transform: translateY(-10px);
 }
 
-/* Habilita o rolamento suave nativo entre as seções/anchors */
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: var(--font-sans);
-  background-color: var(--color-background);
-  color: var(--color-foreground);
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-display);
-}
-
-/* Listra decorativa verde */
-.stripe {
-  background: repeating-linear-gradient(
-    -45deg,
-    var(--color-primary),
-    var(--color-primary) 10px,
-    #00b347 10px,
-    #00b347 20px
-  );
-}
-
-/* --- CLASSE DE REVELAÇÃO AO ROLAR (SCROLL REVEAL) --- */
+/* --- SCROLL REVEAL (REVELAÇÃO AO ROLAR) --- */
 .reveal-element {
   opacity: 0;
   transform: translateY(35px);
@@ -128,7 +108,6 @@ h1, h2, h3, h4, h5, h6 {
   will-change: opacity, transform;
 }
 
-/* Estado ativado pelo IntersectionObserver */
 .reveal-element.is-visible {
   opacity: 1;
   transform: translateY(0);
@@ -160,6 +139,9 @@ h1, h2, h3, h4, h5, h6 {
   z-index: -1;
 }
 
+/* --- TRANSIÇÕES DE SEÇÃO (SECTION TRANSITIONS) --- */
+
+/* Transição Estilo Fade Up */
 .transition-fade-up {
   opacity: 0;
   transform: translateY(40px);
@@ -173,7 +155,7 @@ h1, h2, h3, h4, h5, h6 {
   transform: translateY(0);
 }
 
-/* 2. Transição Estilo Cortina/Revelação Gráfica (Editorial) */
+/* Transição Estilo Cortina/Revelação Gráfica (Editorial) */
 .transition-clip {
   opacity: 0;
   clip-path: inset(10% 0 10% 0);
