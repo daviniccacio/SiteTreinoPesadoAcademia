@@ -4,17 +4,25 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Treino Pesado Academia | São Mateus do Maranhão</title>
-  
-  <!-- Fontes Google: Outfit (Títulos) & Inter (Corpo) -->
+
+  <!-- 1. Preconnect para conectar antecipadamente aos servidores de fontes -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800;900&display=swap" rel="stylesheet" />
-  
-  <!-- Ícones Material Symbols -->
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+
+  <!-- 2. Carregamento assíncrono das fontes (evita bloquear a renderização inicial) -->
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800;900&display=swap" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800;900&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+
+  <!-- 3. Preload correto da imagem LCP (sem o prefixo /public/) -->
+  <link rel="preload" as="image" href="/assets/img/fotoacademia1.webp" type="image/webp" fetchpriority="high" />
 </head>
-<body class="bg-brand-dark text-[#e5e1e4] antialiased selection:bg-brand-primary selection:text-[#003910]">
+<body class="bg-brand-dark text-[#e5e1e4] antialiased selection:bg-brand-primary selection:text-primary">
   <div id="app"></div>
+  
+  <!-- Entrypoint do Vue 3 / Vite -->
   <script type="module" src="/src/main.js"></script>
 </body>
 </html>

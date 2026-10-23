@@ -3,11 +3,11 @@
     <!-- Cabeçalho Pôster Superior (Coluna Única) -->
     <div class="relative mx-auto max-w-6xl px-5 mb-12 border-b border-border pb-8 flex flex-col md:flex-row md:items-end justify-between gap-6">
       <div class="space-y-3 max-w-xl">
-        <span class="mb-4 inline-block bg-primary px-2 py-1 text-xs font-bold uppercase tracking-widest text-primary-foreground">
+        <span class="inline-block bg-primary px-3 py-1 font-display text-xs font-black uppercase text-primary-foreground">
           Dúvidas Frequentes
         </span>
         <h2 class="font-display text-4xl font-black uppercase md:text-6xl">
-          Tudo o que você precisa <span class="text-primary">saber.</span>
+          Tudo o que você <span class="text-primary">precisa saber</span>
         </h2>
       </div>
     </div>
@@ -58,7 +58,7 @@ const faqList = [
     answer: 'Não. Você paga o plano escolhido no balcão ou WhatsApp e já pode começar a treinar no mesmo dia.'
   },
   {
-    question: 'Tem professor pra me orientar?',
+    question: 'Tem profissional pra me orientar?',
     answer: 'Sim! Contamos com instrutores na sala de musculação para tirar dúvidas, orientar suas séries e auxiliar na execução correta dos exercícios.'
   },
   {
@@ -66,11 +66,11 @@ const faqList = [
     answer: 'Você faz o download na Google Play Store e nós liberamos o seu acesso para acompanhar seus treinos e fichas de forma 100% digital.'
   },
   {
-    question: 'Quais formas de pagamento?',
+    question: 'Quais são as formas de pagamento?',
     answer: 'Aceitamos Pix, cartões de débito, crédito e dinheiro.'
   },
   {
-    question: 'Posso fazer só uma diária pra testar?',
+    question: 'Posso fazer só uma diária pra conhecer?',
     answer: 'Com certeza! A diária custa apenas R$10 e dá acesso completo aos equipamentos durante todo o dia.'
   }
 ]

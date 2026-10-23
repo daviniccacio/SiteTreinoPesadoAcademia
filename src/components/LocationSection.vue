@@ -5,7 +5,7 @@
       
       <!-- Título de Impacto -->
       <div class="mb-14">
-        <span class="mb-4 inline-block bg-primary px-2 py-1 text-xs font-bold uppercase tracking-widest text-primary-foreground">VENHA CONHECER</span>
+        <span class="inline-block bg-primary px-3 py-1 font-display text-xs font-black uppercase text-primary-foreground">VENHA CONHECER</span>
         <h2 class=" font-display text-4xl font-black uppercase md:text-6xl">
           Nossa <span class="text-primary">Localização</span>
         </h2>

@@ -4,18 +4,18 @@
     <div class="mb-12 flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-border pb-8">
       <div class="space-y-3">
         <div class="flex items-center gap-3">
-          <span class="inline-block bg-primary px-3 py-1 font-display text-[10px] font-black uppercase text-primary-foreground">
+          <span class="inline-block bg-primary px-3 py-1 font-display text-xs font-black uppercase text-primary-foreground">
             AVALIAÇÕES REAIS
           </span>
 
         </div>
         
         <h2 class="font-display text-4xl font-black uppercase md:text-6xl leading-none">
-          Quem treina, <span class="text-primary">aprova.</span>
+          Quem treina, <span class="text-primary">aprova</span>
         </h2>
         
-        <p class="text-xs text-muted-foreground leading-relaxed max-w-lg">
-          Opinião sincera de quem vive a rotina da Treino Pesado em São Mateus do Maranhão.
+        <p class="text-xs text-muted-foreground leading-relaxed max-w-xl">
+          Opinião sincera de quem vive a rotina da Treino Pesado Academia em São Mateus do Maranhão.
         </p>
       </div>
 

@@ -1,61 +1,76 @@
 <template>
   <div class="min-h-screen bg-background text-foreground">
+    <!-- Barra de Navegação Superior -->
     <Navbar />
-    
+
     <main class="space-y-4">
-      <!-- Seção Principal com Transição Suave -->
+      <!-- 1. Hero / Destaque Principal -->
       <SectionTransition type="fade-up">
         <HeroSection />
       </SectionTransition>
 
-      <!-- Seção de Planos -->
+      <!-- 2. Contador / Estatísticas Rápidas -->
+      <SectionTransition type="fade-up">
+        <StatsTicker />
+      </SectionTransition>
+
+      <!-- 3. Estrutura da Academia -->
+      <SectionTransition type="fade-up">
+        <StructureSection />
+      </SectionTransition>
+
+      <!-- 4. Tabela de Planos e Preços -->
       <SectionTransition type="fade-up">
         <PricingSection />
       </SectionTransition>
 
-      <!-- Seção do Aplicativo com Efeito Cortina/Clip -->
+      <!-- 5. Aplicativo Treino Pesado (Efeito Cortina) -->
       <SectionTransition type="clip">
         <AppShowcase />
       </SectionTransition>
 
-      <!-- Seção de Avaliações -->
+      <!-- 6. Avaliações dos Alunos -->
       <SectionTransition type="fade-up">
         <ReviewsSection />
       </SectionTransition>
 
-      <!-- Banner do Instagram -->
+      <!-- 7. Chamada do Instagram -->
       <SectionTransition type="fade-up">
         <InstagramBanner />
       </SectionTransition>
-      
+
+      <!-- 8. Localização e Mapa -->
       <SectionTransition type="clip">
         <LocationSection />
       </SectionTransition>
-    </main>
-      <!-- Dúvidas/FAQ -->
+
+      <!-- 9. Perguntas Frequentes (FAQ) -->
       <SectionTransition type="fade-up">
         <FaqSection />
       </SectionTransition>
+    </main>
 
-      <!-- Localização -->
-
+    <!-- Rodapé da Página -->
     <FooterSection />
+
+    <!-- Botão Flutuante do WhatsApp -->
     <FloatingWhatsapp />
   </div>
 </template>
 
 <script setup>
-import Navbar from '../components/NavBar.vue'
+// Importações correspondentes exatamente aos arquivos da pasta src/components/
+import Navbar from '../components/Navbar.vue'
 import HeroSection from '../components/HeroSection.vue'
 import PricingSection from '../components/PricingSection.vue'
 import AppShowcase from '../components/AppShowcase.vue'
 import ReviewsSection from '../components/ReviewsSection.vue'
 import InstagramBanner from '../components/InstagramBanner.vue'
-import FaqSection from '../components/FaqSection.vue'
 import LocationSection from '../components/LocationSection.vue'
+import FaqSection from '../components/FaqSection.vue'
 import FooterSection from '../components/Footer.vue'
 import FloatingWhatsapp from '../components/FloatingWhatsapp.vue'
 
-// Importa o wrapper de transições de seção
+// Importação do invólucro de transição
 import SectionTransition from '../components/SectionTransition.vue'
 </script>

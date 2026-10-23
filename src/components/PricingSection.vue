@@ -10,7 +10,7 @@
         </h2>
       </div>
       <p class="text-sm font-semibold uppercase tracking-wider text-muted-foreground">
-        Pagou • Treinou • Sem Fidelidade
+        Pagou • Treinou
       </p>
     </div>
 

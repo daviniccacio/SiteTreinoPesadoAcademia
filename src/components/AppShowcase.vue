@@ -1,16 +1,16 @@
 <template>
-  <section id="aplicativo" class="border-y border-border bg-surface py-24">
+  <section id="aplicativo" ref="sectionRef" class="border-y border-border bg-surface py-24 overflow-hidden">
     <div class="mx-auto grid max-w-6xl items-center gap-12 px-5 md:grid-cols-2">
       
       <!-- Esquerda: Informações e Download -->
       <div class="space-y-6">
         <div class="space-y-2">
-          <span class="inline-block bg-primary px-3 py-1 font-display text-[10px] font-black uppercase text-primary-foreground">
-            APP OFICIAL TREINO PESADO
+          <span class="inline-block bg-primary px-3 py-1 font-display text-xs font-black uppercase text-primary-foreground">
+            APlicativo OFICIAL TREINO PESADO
           </span>
           <h2 class="font-display text-4xl font-black uppercase md:text-6xl leading-none">
             Seu treino <br />
-            <span class="text-primary">no bolso.</span>
+            <span class="text-primary">no bolso</span>
           </h2>
         </div>
 
@@ -18,7 +18,7 @@
           Acompanhe suas fichas de musculação, receba avisos importantes da academia e acompanhe a sua evolução diária direto pelo celular.
         </p>
 
-        <!-- Lista de Recursos no estilo Checagem Editorial -->
+        <!-- Lista de Recursos -->
         <ul class="space-y-3 font-display text-xs font-bold uppercase text-foreground">
           <li class="flex items-center gap-3">
             <span class="flex h-5 w-5 items-center justify-center rounded-full bg-primary/20 text-primary font-mono text-xs">✓</span>
@@ -53,23 +53,102 @@
         </div>
       </div>
 
-      <!-- Direita: Moldura de Smartphone Flutuante (Pronta para Screenshot) -->
-      <div class="flex justify-center">
-        <div class="animate-float relative h-[500px] w-[250px] rounded-[3rem] border-[8px] border-secondary bg-background p-3 shadow-2xl transition-all hover:border-primary">
-          <!-- Notch do Celular (Câmera) -->
-          <div class="absolute top-4 left-1/2 -translate-x-1/2 h-4 w-20 rounded-full bg-secondary z-20"></div>
-
-          <!-- AQUI ENTRA A FOTO OFICIAL DO APLICATIVO -->
-          <div class="h-full w-full overflow-hidden rounded-[2.2rem] bg-background">
+      <!-- Direita: Apresentação Tripla dos Celulares com Expansão e Retração Automática -->
+      <div 
+        class="group relative flex min-h-[540px] items-center justify-center cursor-pointer"
+        @mouseenter="isHovered = true"
+        @mouseleave="isHovered = false"
+      >
+        
+        <!-- 1. CELULAR DA ESQUERDA (Secundário) -->
+        <div 
+          class="absolute z-10 h-[440px] w-[220px] rounded-[2.5rem] border-[6px] border-secondary bg-background p-2 shadow-xl transition-all duration-700 ease-in-out"
+          :class="(isRevealed || isHovered) 
+            ? 'opacity-90 -translate-x-28 md:-translate-x-36 -rotate-12 scale-90' 
+            : 'opacity-0 translate-x-0 rotate-0 scale-75 pointer-events-none'"
+        >
+          <div class="absolute top-3 left-1/2 -translate-x-1/2 h-3 w-12 rounded-full bg-secondary z-20"></div>
+          <div class="h-full w-full overflow-hidden rounded-[2rem] bg-[#f8f9fa] flex items-center justify-center">
             <img 
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCN_9vT5wwOS8mQhgSZRx0OaDqXOsn_anJOuCU-NmBU-qPC13wrqLb-l1idvgdDw1nmET6WbouUdEuRn0AtrGTpLG4R9LaCTvyoopKMg2M0gdLGHBdP1sCajVvSz6UQZ6tUYDELRxDcbjJyXW6nzjEu6y34aiHvE-b1ik7fWbTuWShMrmuVCBQAwEYRJy7mZjmn3CjufQ115qxgAF2E7mK0WrglzR313RWcCF5JmGex0RlVj0FLDygmtj8LS_ohn5IElk" 
-              alt="Captura de tela do aplicativo Treino Pesado" 
-              class="h-full w-full object-cover object-top"
+              :src="appPrintLeftImg || appPrint" 
+              alt="Tela secundária do app - Treino Pesado" 
+              class="h-full w-full object-contain object-center"
             />
           </div>
         </div>
+
+        <!-- 2. CELULAR PRINCIPAL (Centro) -->
+        <div class="animate-float relative z-20 h-[520px] w-[260px] rounded-[3rem] border-[8px] border-secondary bg-background p-2.5 shadow-2xl transition-all duration-300">
+          <div class="absolute top-3.5 left-1/2 -translate-x-1/2 h-3.5 w-16 rounded-full bg-secondary z-20"></div>
+          <div class="h-full w-full overflow-hidden rounded-[2.2rem] bg-[#f8f9fa] flex items-center justify-center">
+            <img 
+              :src="appPrint" 
+              alt="Tela principal do app - Treino Pesado Academia" 
+              class="h-full w-full object-contain object-center"
+            />
+          </div>
+        </div>
+
+        <!-- 3. CELULAR DA DIREITA (Secundário) -->
+        <div 
+          class="absolute z-10 h-[440px] w-[220px] rounded-[2.5rem] border-[6px] border-secondary bg-background p-2 shadow-xl transition-all duration-700 ease-in-out"
+          :class="(isRevealed || isHovered) 
+            ? 'opacity-90 translate-x-28 md:translate-x-36 rotate-12 scale-90' 
+            : 'opacity-0 translate-x-0 rotate-0 scale-75 pointer-events-none'"
+        >
+          <div class="absolute top-3 left-1/2 -translate-x-1/2 h-3 w-12 rounded-full bg-secondary z-20"></div>
+          <div class="h-full w-full overflow-hidden rounded-[2rem] bg-[#f8f9fa] flex items-center justify-center">
+            <img 
+              :src="appPrintRightImg || appPrint" 
+              alt="Tela secundária do app - Treino Pesado" 
+              class="h-full w-full object-contain object-center"
+            />
+          </div>
+        </div>
+
       </div>
 
     </div>
   </section>
 </template>
+
+<script setup>
+import { ref, onMounted, onUnmounted } from 'vue'
+
+import appPrint from '../../public/assets/img/treinopesadoappprint5.webp'
+import appPrintLeftImg from '../../public/assets/img/treinopesadoappprint6.webp'
+import appPrintRightImg from '../../public/assets/img/treinopesadoappprint4.webp'
+
+const sectionRef = ref(null)
+const isRevealed = ref(false)
+const isHovered = ref(false)
+
+let observer = null
+
+onMounted(() => {
+  // IntersectionObserver configurado de forma bidirecional:
+  // entry.isIntersecting altera isRevealed continuamente conforme você entra ou sai da seção.
+  observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        // Ativa (true) ao entrar na área central e desativa (false) ao rolar para fora
+        isRevealed.value = entry.isIntersecting
+      })
+    },
+    {
+      rootMargin: '-15% 0px -15% 0px',
+      threshold: 0.25
+    }
+  )
+
+  if (sectionRef.value) {
+    observer.observe(sectionRef.value)
+  }
+})
+
+onUnmounted(() => {
+  if (observer) {
+    observer.disconnect()
+  }
+})
+</script>
