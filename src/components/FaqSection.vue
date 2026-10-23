@@ -55,7 +55,7 @@ const openIndex = ref(0)
 const faqList = [
   {
     question: 'Preciso fazer matrícula?',
-    answer: 'Não. Você paga o plano escolhido no balcão ou WhatsApp e já pode começar a treinar no mesmo dia.'
+    answer: 'Sim. Você escolhe o plano de acordo com o que deseja, realizar a matrícula e já pode começar a treinar.'
   },
   {
     question: 'Tem profissional pra me orientar?',
