@@ -88,9 +88,9 @@ const activeSection = ref('')
 
 const navItems = [
   { id: 'planos', label: 'Planos', href: '#planos' },
-  { id: 'aplicativo', label: 'App', href: '#aplicativo' },
+  { id: 'aplicativo', label: 'Aplicativo', href: '#aplicativo' },
   { id: 'avaliacoes', label: 'Avaliações', href: '#avaliacoes' },
-  { id: 'local', label: 'Onde estamos', href: '#local' },
+  { id: 'local', label: 'Localização', href: '#local' },
   { id: 'duvidas', label: 'Dúvidas', href: '#duvidas' }
 ]
 

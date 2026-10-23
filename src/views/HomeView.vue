@@ -3,34 +3,41 @@
     <Navbar />
     
     <main class="space-y-4">
-      <div class="reveal-element">
+      <!-- Seção Principal com Transição Suave -->
+      <SectionTransition type="fade-up">
         <HeroSection />
-      </div>
+      </SectionTransition>
 
-      <div class="reveal-element">
+      <!-- Seção de Planos -->
+      <SectionTransition type="fade-up">
         <PricingSection />
-      </div>
+      </SectionTransition>
 
-      <div class="reveal-element">
+      <!-- Seção do Aplicativo com Efeito Cortina/Clip -->
+      <SectionTransition type="clip">
         <AppShowcase />
-      </div>
+      </SectionTransition>
 
-      <div class="reveal-element">
+      <!-- Seção de Avaliações -->
+      <SectionTransition type="fade-up">
         <ReviewsSection />
-      </div>
+      </SectionTransition>
 
-      <div class="reveal-element">
+      <!-- Banner do Instagram -->
+      <SectionTransition type="fade-up">
         <InstagramBanner />
-      </div>
-
-      <div class="reveal-element">
-        <LocationSection />
-      </div>
+      </SectionTransition>
       
-      <div class="reveal-element">
-        <FaqSection />
-      </div>
+      <SectionTransition type="clip">
+        <LocationSection />
+      </SectionTransition>
     </main>
+      <!-- Dúvidas/FAQ -->
+      <SectionTransition type="fade-up">
+        <FaqSection />
+      </SectionTransition>
+
+      <!-- Localização -->
 
     <FooterSection />
     <FloatingWhatsapp />
@@ -38,7 +45,7 @@
 </template>
 
 <script setup>
-import Navbar from '../components/Navbar.vue'
+import Navbar from '../components/NavBar.vue'
 import HeroSection from '../components/HeroSection.vue'
 import PricingSection from '../components/PricingSection.vue'
 import AppShowcase from '../components/AppShowcase.vue'
@@ -49,8 +56,6 @@ import LocationSection from '../components/LocationSection.vue'
 import FooterSection from '../components/Footer.vue'
 import FloatingWhatsapp from '../components/FloatingWhatsapp.vue'
 
-// Importa e inicializa a animação ao rolar a página
-import { useScrollReveal } from '../composables/useScrollReveal'
-
-useScrollReveal()
+// Importa o wrapper de transições de seção
+import SectionTransition from '../components/SectionTransition.vue'
 </script>

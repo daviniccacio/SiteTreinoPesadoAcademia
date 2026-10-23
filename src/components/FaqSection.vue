@@ -1,7 +1,7 @@
 <template>
-  <section id="duvidas" class="mx-auto max-w-7xl px-5 py-24">
+  <section id="duvidas" class="mx-auto bg-surface px-5 py-24">
     <!-- Cabeçalho Pôster Superior (Coluna Única) -->
-    <div class="mb-12 border-b border-border pb-8 flex flex-col md:flex-row md:items-end justify-between gap-6">
+    <div class="relative mx-auto max-w-6xl px-5 mb-12 border-b border-border pb-8 flex flex-col md:flex-row md:items-end justify-between gap-6">
       <div class="space-y-3 max-w-xl">
         <span class="mb-4 inline-block bg-primary px-2 py-1 text-xs font-bold uppercase tracking-widest text-primary-foreground">
           Dúvidas Frequentes
@@ -13,7 +13,7 @@
     </div>
 
     <!-- Lista de Acordeões Editoriais em Coluna Única -->
-    <div class="space-y-4">
+    <div class="space-y-4 relative mx-auto max-w-6xl px-5">
       <div 
         v-for="(item, index) in faqList" 
         :key="index"
@@ -25,7 +25,7 @@
           class="flex w-full items-center justify-between p-6 text-left font-display text-base md:text-lg font-bold uppercase cursor-pointer"
         >
           <span class="flex items-center gap-3">
-            <span class="text-xs font-mono text-primary font-bold">// 0{{ index + 1 }}</span>
+            <span class="text-md font-mono text-primary font-bold">{{ index + 1 }}.</span>
             <span class="text-foreground">{{ item.question }}</span>
           </span>
           <span 

@@ -40,6 +40,19 @@
     </div>
   </section>
 
-  <!-- Listra Decorativa -->
-  <div class="stripe h-3"></div>
+  <!-- Borda Final: Barra de Status das Especificações -->
+  <div class="border-y border-border bg-surface px-5 py-3.5">
+    <div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 font-display text-xs font-bold uppercase">
+      <div class="flex items-center gap-2">
+        <span class="h-2 w-2 rounded-full bg-primary animate-pulse"></span>
+        <span class="text-foreground">São Mateus do Maranhão - MA</span>
+      </div>
+      <div class="text-white">
+        Mensalidade <span class="text-primary font-black">• R$ 80</span> 
+      </div>
+      <div class="text-foreground hidden sm:block">
+        Segunda a Sexta • <span class="text-primary font-black">06h às 21h</span>
+      </div>
+    </div>
+  </div>
 </template>

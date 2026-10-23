@@ -150,9 +150,6 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-.animate-pulse-ring {
-}
-
 .animate-pulse-ring::before {
   content: '';
   position: absolute;
@@ -161,4 +158,34 @@ h1, h2, h3, h4, h5, h6 {
   background-color: var(--color-primary);
   animation: pulse-ring 2.2s infinite cubic-bezier(0.4, 0, 0.6, 1);
   z-index: -1;
+}
+
+.transition-fade-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.transition-fade-up.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 2. Transição Estilo Cortina/Revelação Gráfica (Editorial) */
+.transition-clip {
+  opacity: 0;
+  clip-path: inset(10% 0 10% 0);
+  transform: scale(0.96);
+  transition: opacity 0.9s ease,
+              clip-path 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, clip-path, transform;
+}
+
+.transition-clip.is-visible {
+  opacity: 1;
+  clip-path: inset(0 0 0 0);
+  transform: scale(1);
 }

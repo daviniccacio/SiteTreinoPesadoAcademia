@@ -1,5 +1,5 @@
 <template>
-  <section id="local" class="relative overflow-hidden border-t border-border bg-background py-24">
+  <section id="local" class="relative overflow-hidden bg-background py-24">
 
     <div class="relative mx-auto max-w-6xl px-5">
       
