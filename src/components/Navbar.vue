@@ -28,7 +28,7 @@
         </a>
 
         <!-- Botão WhatsApp -->
-        <a href="https://wa.me/5585900000000?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20a%20Treino%20Pesado"
+        <a href="https://wa.me/5599984079671?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20a%20Treino%20Pesado"
           target="_blank" rel="noreferrer"
           class="rounded-sm bg-primary font-bold text-primary-foreground transition-all duration-300 hover:opacity-90 shadow-[0_0_12px_rgba(0,230,91,0.3)]"
           :class="isScrolled ? 'px-3 py-1.5 text-xs' : 'px-4 py-2 text-sm'">

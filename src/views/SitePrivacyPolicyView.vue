@@ -30,7 +30,7 @@
           <p>Durante a sua navegação neste site, podemos recolher:</p>
           <ul class="list-disc list-inside space-y-1.5 pl-2">
             <li><strong class="text-foreground">Dados de Navegação Técnicos:</strong> Endereço IP, tipo de navegador e páginas visitadas para fins estatísticos e de desempenho.</li>
-            <li><strong class="text-foreground">Atendimento via WhatsApp:</strong> Ao clicar nos botões de contacto, é redirecionado para a aplicação oficial do WhatsApp. Não guardamos conversas no servidor do site.</li>
+            <li><strong class="text-foreground">Atendimento via WhatsApp:</strong> Ao clicar nos botões de contato, é redirecionado para a aplicação oficial do WhatsApp. Não guardamos conversas no servidor do site.</li>
           </ul>
         </section>
 

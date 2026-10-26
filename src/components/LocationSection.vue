@@ -42,7 +42,7 @@
               Abrir rota no Maps
             </a>
             <a 
-              href="https://wa.me/5585900000000?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20a%20Treino%20Pesado" 
+              href="https://wa.me/5599984079671?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20a%20Treino%20Pesado" 
               target="_blank" 
               rel="noreferrer" 
               class="w-full rounded-xl border border-border bg-background py-3.5 text-center font-display text-xs font-bold uppercase tracking-wider text-foreground transition hover:border-primary hover:text-primary"

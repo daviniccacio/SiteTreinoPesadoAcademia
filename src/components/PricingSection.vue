@@ -29,12 +29,12 @@
           <p class="mt-4 text-sm leading-relaxed text-muted-foreground">Pra quem tá de passagem ou quer conhecer a estrutura hoje.</p>
         </div>
         <a 
-          href="https://wa.me/5585900000000?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20a%20Di%C3%A1ria" 
+          href="https://wa.me/5599984079671?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20a%20Di%C3%A1ria" 
           target="_blank" 
           rel="noreferrer" 
           class="mt-8 block border-2 border-foreground py-3.5 text-center font-display font-black uppercase tracking-wider transition-all hover:bg-foreground hover:text-background"
         >
-          Treinar Hoje
+          Garantir Diária
         </a>
       </div>
 
@@ -56,12 +56,12 @@
           <p class="mt-4 text-sm leading-relaxed text-foreground/90 font-medium">Acesso livre o mês inteiro. O melhor custo-benefício para quem treina sério.</p>
         </div>
         <a 
-          href="https://wa.me/5585900000000?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20o%20Plano%20Mensal" 
+          href="https://wa.me/5599984079671?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20o%20Plano%20Mensal" 
           target="_blank" 
           rel="noreferrer" 
           class="mt-8 block bg-primary py-4 text-center font-display font-black uppercase tracking-wider text-primary-foreground transition-all hover:bg-[#00b347] shadow-md"
         >
-          Garantir Mensal
+          Assinar Mensal
         </a>
       </div>
 
@@ -79,7 +79,7 @@
           <p class="mt-4 text-sm leading-relaxed text-muted-foreground">15 dias de treino sem compromisso longo.</p>
         </div>
         <a 
-          href="https://wa.me/5585900000000?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20a%20Quinzena" 
+          href="https://wa.me/5599984079671?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20a%20Quinzena" 
           target="_blank" 
           rel="noreferrer" 
           class="mt-8 block border-2 border-foreground py-3.5 text-center font-display font-black uppercase tracking-wider transition-all hover:bg-foreground hover:text-background"

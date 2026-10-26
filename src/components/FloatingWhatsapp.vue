@@ -1,6 +1,6 @@
 <template>
   <a 
-    href="https://wa.me/5585900000000?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20a%20Treino%20Pesado" 
+    href="https://wa.me/5599984079671?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20a%20Treino%20Pesado" 
     target="_blank" 
     rel="noreferrer" 
     aria-label="WhatsApp" 

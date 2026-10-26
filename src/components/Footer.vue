@@ -85,7 +85,7 @@
             <!-- WhatsApp (Corrigido) -->
             <li>
               <a 
-                href="https://wa.me/5585900000000?text=Ol%C3%A1!" 
+                href="https://wa.me/5599984079671?text=Ol%C3%A1!" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 class="group inline-flex items-center gap-2.5 transition-all duration-200 hover:text-primary"
