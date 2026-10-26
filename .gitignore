@@ -33,3 +33,5 @@ pnpm-debug.log*
 # Cache de testes e ferramentas
 .cache/
 .temp/
+
+.vscode 
