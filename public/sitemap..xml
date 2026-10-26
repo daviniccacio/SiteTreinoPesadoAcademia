@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Página Inicial (Landing Page) -->
+  <url>
+    <loc>https://treinopesadoacademia.com.br/</loc>
+    <lastmod>2026-10-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Política de Privacidade do Site -->
+  <url>
+    <loc>https://treinopesadoacademia.com.br/politica-de-privacidade/site</loc>
+    <lastmod>2026-10-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+  </url>
+
+  <!-- Política de Privacidade do App Mobile -->
+  <url>
+    <loc>https://treinopesadoacademia.com.br/politica-de-privacidade/app</loc>
+    <lastmod>2026-10-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- Solicitação de Exclusão de Conta do App -->
+  <url>
+    <loc>https://treinopesadoacademia.com.br/exclusao-de-conta</loc>
+    <lastmod>2026-10-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+</urlset>

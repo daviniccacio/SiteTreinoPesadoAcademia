@@ -4,10 +4,7 @@ import tailwindcss from '@tailwindcss/vite'
 import { fileURLToPath, URL } from 'node:url'
 
 export default defineConfig({
-  plugins: [
-    vue(),
-    tailwindcss()
-  ],
+  plugins: [vue(), tailwindcss()],
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
@@ -16,8 +13,12 @@ export default defineConfig({
   preview: {
     port: 3000,
     headers: {
-      // Garante cache imutável de alta performance para os assets compilados
-      'Cache-Control': 'public, max-age=31536000, immutable'
+      'Cache-Control': 'public, max-age=31536000, immutable',
+      // Cabeçalhos de Segurança HTTP
+      'X-Frame-Options': 'DENY',
+      'X-Content-Type-Options': 'nosniff',
+      'Referrer-Policy': 'strict-origin-when-cross-origin',
+      'Permissions-Policy': 'camera=(), microphone=(), geolocation=()'
     }
   },
   build: {

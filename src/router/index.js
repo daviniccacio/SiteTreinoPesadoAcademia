@@ -1,33 +1,21 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
-// Importação das páginas da aplicação
 import HomeView from '@/views/HomeView.vue'
-import PrivacyPolicyView from '@/views/PrivacyPolicyView.vue'
+import SitePrivacyPolicyView from '@/views/SitePrivacyPolicyView.vue'
+import AppPrivacyPolicyView from '@/views/AppPrivacyPolicyView.vue'
 import DeleteAccountView from '@/views/DeleteAccountView.vue'
 import NotFoundView from '@/views/NotFoundView.vue'
 
+// ID de Medição do Google Analytics 4
+const GA_MEASUREMENT_ID = 'G-P62FZPK9MB'
+
 const routes = [
-  {
-    path: '/',
-    name: 'home',
-    component: HomeView
-  },
-  {
-    path: '/politica-de-privacidade',
-    name: 'privacy-policy',
-    component: PrivacyPolicyView
-  },
-  {
-    path: '/exclusao-de-conta',
-    name: 'delete-account',
-    component: DeleteAccountView
-  },
-  // ROTA CATCH-ALL (Captura qualquer URL que não coincida com as rotas acima)
-  {
-    path: '/:pathMatch(.*)*',
-    name: 'not-found',
-    component: NotFoundView
-  }
+  { path: '/', name: 'home', component: HomeView },
+  { path: '/politica-de-privacidade', redirect: '/politica-de-privacidade/site' },
+  { path: '/politica-de-privacidade/site', name: 'site-privacy', component: SitePrivacyPolicyView },
+  { path: '/politica-de-privacidade/app', name: 'app-privacy', component: AppPrivacyPolicyView },
+  { path: '/exclusao-de-conta', name: 'delete-account', component: DeleteAccountView },
+  { path: '/:pathMatch(.*)*', name: 'not-found', component: NotFoundView }
 ]
 
 const router = createRouter({
@@ -35,6 +23,16 @@ const router = createRouter({
   routes,
   scrollBehavior() {
     return { top: 0 }
+  }
+})
+
+// Gancho para envio automático de eventos de visualização de página no GA4
+router.afterEach((to) => {
+  if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
+    window.gtag('config', GA_MEASUREMENT_ID, {
+      page_path: to.fullPath,
+      page_title: document.title
+    })
   }
 })
 

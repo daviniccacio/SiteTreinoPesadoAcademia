@@ -7,11 +7,11 @@
       :class="isScrolled ? 'h-12' : 'h-16'">
 
       <!-- Logo e Nome da Academia -->
-      <a href="#topo" class="flex items-center gap-3 transition-transform hover:scale-105">
+      <a href="#topo" class="flex items-center transition-transform">
         <img
           src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCN_9vT5wwOS8mQhgSZRx0OaDqXOsn_anJOuCU-NmBU-qPC13wrqLb-l1idvgdDw1nmET6WbouUdEuRn0AtrGTpLG4R9LaCTvyoopKMg2M0gdLGHBdP1sCajVvSz6UQZ6tUYDELRxDcbjJyXW6nzjEu6y34aiHvE-b1ik7fWbTuWShMrmuVCBQAwEYRJy7mZjmn3CjufQ115qxgAF2E7mK0WrglzR313RWcCF5JmGex0RlVj0FLDygmtj8LS_ohn5IElk"
           alt="Treino Pesado Academia" width="180" height="44" class="w-auto transition-all duration-300"
-          :class="isScrolled ? 'h-8' : 'h-11'" />
+          :class="isScrolled ? 'h-13' : 'h-19'" />
         <span class="hidden font-display font-black uppercase text-white sm:block transition-all duration-300"
           :class="isScrolled ? 'text-base' : 'text-lg'">
           Treino Pesado <span class="text-primary">Academia</span>

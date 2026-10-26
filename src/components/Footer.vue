@@ -140,6 +140,7 @@
       <!-- Divisor e Copyright -->
       <div class="mt-12 flex flex-col items-center justify-between gap-4 border-t border-border/50 pt-8 sm:flex-row text-xs text-muted-foreground">
         <p>© 2026 Treino Pesado Academia. Todos os direitos reservados.</p>
+        <p>Desenvolvido por <a href="https://github.com/daviniccacio" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">daviniccacio</a></p>
 
         <a 
           href="#topo"
