@@ -23,7 +23,7 @@
         />
         <!-- Nome visível em telas pequenas e grandes -->
         <span 
-          class="font-display font-black uppercase text-white transition-all duration-300 leading-tight text-xs xs:text-md sm:text-base md:text-lg"
+          class="font-display font-black uppercase text-white transition-all duration-300 leading-tight text-xs xs:text-sm sm:text-base md:text-lg"
         >
           Treino Pesado <span class="text-primary">Academia</span>
         </span>
@@ -45,7 +45,7 @@
 
         <!-- Botão WhatsApp Desktop -->
         <a 
-          href="https://wa.me/5585900000000?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20a%20Treino%20Pesado"
+          href="https://wa.me/5599984079671?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20a%20Treino%20Pesado"
           target="_blank" 
           rel="noreferrer"
           class="rounded-sm bg-primary font-bold text-primary-foreground transition-all duration-300 hover:opacity-90 shadow-[0_0_12px_rgba(0,230,91,0.3)]"
