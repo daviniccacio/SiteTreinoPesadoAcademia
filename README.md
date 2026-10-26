@@ -1,73 +1,79 @@
-🏋️‍♂️ Academia Treino Pesado - Landing Page Oficial
+# 🏋️‍♂️ Academia Treino Pesado - Landing Page Oficial
 
-Landing page moderna, responsiva e de alta performance desenvolvida para a Academia Treino Pesado, localizada em São Mateus do Maranhão - MA. Focada em conversão, apresentação de estrutura e acesso ao aplicativo oficial.
+![Vue.js](https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vue.js&logoColor=4FC08D)
+![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-B73BFE?style=for-the-badge&logo=vite&logoColor=FFD62E)
+![Netlify Status](https://api.netlify.com/api/v1/badges/SEU_ID_DO_NETLIFY/deploy-status)
+![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
 
-🚀 Tecnologias Utilizadas
+> Landing page moderna, responsiva e de alta performance desenvolvida para a **Academia Treino Pesado**, localizada em **São Mateus do Maranhão - MA**. Focada em conversão, apresentação de estrutura e acesso ao aplicativo oficial.
+
+<div align="center">
+  <!-- TODO: Tire uma screenshot do seu site rodando e substitua o link da imagem abaixo pelo link real da sua imagem -->
+  <img src="https://via.placeholder.com/1000x500.png?text=Insira+uma+Screenshot+do+Site+Aqui" alt="Demonstração do Site Treino Pesado" width="100%">
+</div>
+
+---
+
+## 🚀 Tecnologias Utilizadas
 
 Este projeto foi construído com as seguintes tecnologias de ponta:
 
-Vue.js 3: Framework JavaScript progressivo usando Composition API (<script setup>).
+- **[Vue.js 3](https://vuejs.org/)**: Framework JavaScript progressivo usando **Composition API** (`<script setup>`).
+- **[Vite.js](https://vitejs.dev/)**: Ferramenta de build ultra-rápida para desenvolvimento moderno.
+- **[Tailwind CSS v4](https://tailwindcss.com/)**: Framework CSS utilitário integrado diretamente via `@tailwindcss/vite`.
+- **[Vue Router 4](https://router.vuejs.org/)**: Gerenciamento de rotas e navegação interna da aplicação.
+- **[Google Fonts (Outfit & Inter)](https://fonts.google.com/)**: Tipografia moderna para títulos e corpo do texto.
+- **[Material Symbols Outlined](https://fonts.google.com/icons)**: Ícones vetoriais do Google.
+- **[Netlify](https://www.netlify.com/)**: Plataforma de hospedagem e contínuo deployment via `netlify.toml` e `_redirects`.
 
-Vite.js: Ferramenta de build ultra-rápida para desenvolvimento moderno.
+---
 
-Tailwind CSS v4: Framework CSS utilitário integrado diretamente via @tailwindcss/vite.
+## ⚙️ Como executar o projeto localmente
 
-Vue Router 4: Gerenciamento de rotas e navegação interna da aplicação.
-
-Google Fonts (Outfit & Inter): Tipografia moderna para títulos e corpo do texto.
-
-Material Symbols Outlined: Ícones vetoriais do Google.
-
-Netlify: Plataforma de hospedagem e contínuo deployment via netlify.toml e _redirects.
-
-⚙️ Como executar o projeto localmente
-
-Pré-requisitos
-
+### Pré-requisitos
 Certifique-se de ter instalado na sua máquina:
+- [Node.js](https://nodejs.org/en/) (versão 18 ou superior)
+- [pnpm](https://pnpm.io/pt/) (Gerenciador de pacotes)
 
-Node.js (versão 18 ou superior)
+### Instalação
 
-pnpm (Gerenciador de pacotes)
-
-Instalação
-
-Clone o repositório:
-
+1. Clone o repositório:
+```bash
 git clone https://github.com/daviniccacio/SiteTreinoPesadoAcademia.git
+```
 
-
-Acesse a pasta do projeto:
-
+2. Acesse a pasta do projeto:
+```bash
 cd SiteTreinoPesadoAcademia
+```
 
-
-Instale as dependências:
-
+3. Instale as dependências:
+```bash
 pnpm install
+```
 
-
-Inicie o servidor de desenvolvimento:
-
+4. Inicie o servidor de desenvolvimento:
+```bash
 pnpm run dev
+```
+O site estará disponível no seu navegador em `http://localhost:5173`.
 
-
-O site estará disponível no seu navegador em http://localhost:5173.
-
-Build para Produção
-
+### Build para Produção
 Para gerar a versão otimizada pronta para envio ao servidor:
-
+```bash
 pnpm run build
-
-
+```
 Para testar a versão de produção localmente:
-
+```bash
 pnpm preview
+```
 
+---
 
-📁 Estrutura Principal do Projeto
+## 📁 Estrutura Principal do Projeto
 
+```text
 site-treino-pesado-academia/
 ├── public/
 │   ├── assets/img/          # Imagens, vetores e logotipos
@@ -85,16 +91,19 @@ site-treino-pesado-academia/
 │   ├── App.vue              # Componente raiz da aplicação
 │   └── main.js              # Ponto de entrada
 └── vite.config.js           # Configuração do Vite com cabeçalhos de segurança
+```
 
+---
 
-📄 Licença
+## 📄 Licença
 
-Este projeto está sob a licença MIT.
+Este projeto está sob a licença [MIT](./LICENSE).
 
-👨‍💻 Autor
+---
 
-Feito com dedicação por Davi Nicacio de Oliveira Cunha.
+## 👨‍💻 Autor
 
-GitHub
-
-Contato: daviniccacio@gmail.com
+Feito com dedicação por **Davi Nicacio de Oliveira Cunha**.
+- [GitHub](https://github.com/daviniccacio)
+- [LinkedIn](https://linkedin.com/in/seulinkedin) <!-- Substitua pelo seu link -->
+- Contato: daviniccacio@gmail.com
