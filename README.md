@@ -1,52 +1,100 @@
-# 🏋️‍♂️ Academia Treino Pesado - Landing Page Oficial
+🏋️‍♂️ Academia Treino Pesado - Landing Page Oficial
 
-Landing page moderna, responsiva e de alta performance desenvolvida para a **Academia Treino Pesado**, localizada em **São Mateus do Maranhão - MA**.
+Landing page moderna, responsiva e de alta performance desenvolvida para a Academia Treino Pesado, localizada em São Mateus do Maranhão - MA. Focada em conversão, apresentação de estrutura e acesso ao aplicativo oficial.
 
----
-
-## 🚀 Tecnologias Utilizadas
+🚀 Tecnologias Utilizadas
 
 Este projeto foi construído com as seguintes tecnologias de ponta:
 
-- **[Vue.js 3](https://vuejs.org/)**: Framework JavaScript progressivo usando **Composition API** (`<script setup>`).
-- **[Vite.js](https://vitejs.dev/)**: Ferramenta de build ultra-rápida para desenvolvimento moderno.
-- **[Tailwind CSS v4](https://tailwindcss.com/)**: Framework CSS utilitário integrado diretamente via `@tailwindcss/vite`.
-- **[Vue Router 4](https://router.vuejs.org/)**: Gerenciamento de rotas e navegação interna da aplicação.
-- **[Google Fonts (Outfit & Inter)](https://fonts.google.com/)**: Tipografia moderna para títulos e corpo do texto.
-- **[Material Symbols Outlined](https://fonts.google.com/icons)**: Ícones vetoriais do Google.
-- **[Netlify](https://www.netlify.com/)**: Plataforma de hospedagem e contínuo deployment via `netlify.toml` e `_redirects`.
+Vue.js 3: Framework JavaScript progressivo usando Composition API (<script setup>).
 
----
+Vite.js: Ferramenta de build ultra-rápida para desenvolvimento moderno.
 
-## 📁 Estrutura do Projeto
+Tailwind CSS v4: Framework CSS utilitário integrado diretamente via @tailwindcss/vite.
 
-```text
+Vue Router 4: Gerenciamento de rotas e navegação interna da aplicação.
+
+Google Fonts (Outfit & Inter): Tipografia moderna para títulos e corpo do texto.
+
+Material Symbols Outlined: Ícones vetoriais do Google.
+
+Netlify: Plataforma de hospedagem e contínuo deployment via netlify.toml e _redirects.
+
+⚙️ Como executar o projeto localmente
+
+Pré-requisitos
+
+Certifique-se de ter instalado na sua máquina:
+
+Node.js (versão 18 ou superior)
+
+pnpm (Gerenciador de pacotes)
+
+Instalação
+
+Clone o repositório:
+
+git clone https://github.com/daviniccacio/SiteTreinoPesadoAcademia.git
+
+
+Acesse a pasta do projeto:
+
+cd SiteTreinoPesadoAcademia
+
+
+Instale as dependências:
+
+pnpm install
+
+
+Inicie o servidor de desenvolvimento:
+
+pnpm run dev
+
+
+O site estará disponível no seu navegador em http://localhost:5173.
+
+Build para Produção
+
+Para gerar a versão otimizada pronta para envio ao servidor:
+
+pnpm run build
+
+
+Para testar a versão de produção localmente:
+
+pnpm preview
+
+
+📁 Estrutura Principal do Projeto
+
 site-treino-pesado-academia/
 ├── public/
-│   └── _redirects              # Configuração de fallback para o Netlify (SPA)
+│   ├── assets/img/          # Imagens, vetores e logotipos
+│   ├── robots.txt           # Diretrizes para indexação de motores de busca
+│   ├── sitemap.xml          # Mapa do site para SEO (Google/Bing)
+│   └── _redirects           # Configuração de fallback para SPA no Netlify
 ├── src/
 │   ├── assets/
-│   │   └── main.css            # Estilos globais e importação do Tailwind CSS v4
-│   ├── components/
-│   │   ├── Navbar.vue          # Barra de navegação fixa com links rápidos
-│   │   ├── HeroSection.vue     # Chamada principal com estatísticas e CTAs
-│   │   ├── StatsTicker.vue     # Barra de destaques de diferenciais
-│   │   ├── PricingSection.vue  # Tabela e cards de planos (Diária, Quinzena, Mensal)
-│   │   ├── AppShowcase.vue     # Destaque do aplicativo oficial Android (Play Store)
-│   │   ├── StructureSection.vue# Pilares da estrutura e modalidades da academia
-│   │   ├── LocationSection.vue # Endereço, mapa interativo e horários
-│   │   ├── InstagramBanner.vue # Chamada para a comunidade no Instagram
-│   │   ├── FaqSection.vue      # Perguntas e respostas frequentes (Accordion)
-│   │   └── FooterSection.vue   # Rodapé institucional e contatos
+│   │   └── main.css         # Estilos globais e importação do Tailwind CSS v4
+│   ├── components/          # Componentes modulares da interface
+│   ├── composables/         # Funções utilitárias (ex: ScrollReveal)
 │   ├── router/
-│   │   └── index.js            # Configuração do Vue Router
-│   ├── views/
-│   │   └── HomeView.vue        # View principal agregando todos os componentes
-│   ├── App.vue                 # Componente raiz da aplicação
-│   └── main.js                 # Ponto de entrada (instanciação do Vue + Router)
-├── .gitignore                  # Arquivos desconsiderados pelo Git
-├── index.html                  # HTML principal com fontes e ícones
-├── netlify.toml                # Configurações de build e redirecionamentos no Netlify
-├── package.json                # Gerenciador de dependências e scripts do projeto
-├── pnpm-lock.yaml              # Trava de versões do PNPM
-└── vite.config.js              # Configuração do Vite com suporte ao Vue e Tailwind v4
+│   │   └── index.js         # Configuração do Vue Router e GA4
+│   ├── views/               # Telas principais (Home, Políticas, 404)
+│   ├── App.vue              # Componente raiz da aplicação
+│   └── main.js              # Ponto de entrada
+└── vite.config.js           # Configuração do Vite com cabeçalhos de segurança
+
+
+📄 Licença
+
+Este projeto está sob a licença MIT.
+
+👨‍💻 Autor
+
+Feito com dedicação por Davi Nicacio de Oliveira Cunha.
+
+GitHub
+
+Contato: daviniccacio@gmail.com
