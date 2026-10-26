@@ -10,7 +10,7 @@
 
 <div align="center">
   <!-- TODO: Tire uma screenshot do seu site rodando e substitua o link da imagem abaixo pelo link real da sua imagem -->
-  <img src="https://via.placeholder.com/1000x500.png?text=Insira+uma+Screenshot+do+Site+Aqui" alt="Demonstração do Site Treino Pesado" width="100%">
+  <img src="/assets/img/printsite.png" alt="Demonstração do Site Treino Pesado" width="100%">
 </div>
 
 ---
