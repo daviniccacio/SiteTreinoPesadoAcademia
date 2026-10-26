@@ -1,5 +1,5 @@
 <template>
-  <section id="aplicativo" ref="sectionRef" class="border-y border-border bg-surface py-24 overflow-hidden">
+  <section id="aplicativo" ref="sectionRef" class="border-y border-border bg-surface pt-16 pb-0.5 py-24 overflow-hidden">
     <div class="mx-auto grid max-w-6xl items-center gap-12 px-5 md:grid-cols-2">
 
       <!-- Esquerda: Informações e Download -->
@@ -39,8 +39,8 @@
           </li>
         </ul>
 
-        <!-- Botão Google Play -->
-        <div class="pt-4">
+        <!-- Botão Google Play (Centralizado no Mobile, Esquerda no Desktop) -->
+        <div class="pt-4 flex justify-center md:justify-start">
           <a href="https://play.google.com/store/apps/details?id=com.daviniccacio.treinopesado" target="_blank"
             rel="noreferrer"
             class="group inline-flex items-center gap-4 rounded-xl bg-background border border-border px-6 py-4 transition-all duration-300 hover:border-primary hover:shadow-[0_0_20px_rgba(0,230,91,0.15)]">
@@ -60,8 +60,8 @@
         </div>
       </div>
 
-      <!-- Direita: Apresentação Tripla dos Celulares -->
-      <div class="group relative flex min-h-135 items-center justify-center cursor-pointer"
+      <!-- Direita: Apresentação Tripla dos Celulares (Escala ajustada no mobile para não cortar) -->
+      <div class="group relative flex min-h-100 md:min-h-135 items-center justify-center cursor-pointer scale-[0.70] sm:scale-100 origin-center transition-transform"
         @mouseenter="isHovered = true" @mouseleave="isHovered = false">
 
         <!-- 1. CELULAR DA ESQUERDA -->
@@ -72,8 +72,9 @@
             : 'opacity-0 translate-x-0 rotate-0 scale-75 pointer-events-none'">
           <div class="absolute top-3 left-1/2 -translate-x-1/2 h-3 w-12 rounded-full bg-secondary z-20"></div>
           <div class="h-full w-full overflow-hidden rounded-4xl bg-[#f8f9fa] flex items-center justify-center">
+            <!-- Trocado para object-cover object-top para preencher o celular -->
             <img :src="appPrintLeftImg || appPrint" alt="Tela secundária do app - Treino Pesado"
-              class="h-full w-full object-contain object-center" loading="lazy" decoding="async" width="220" height="440" />
+              class="h-full w-full object-cover object-top" loading="lazy" decoding="async" width="220" height="440" />
           </div>
         </div>
 
@@ -82,8 +83,9 @@
           class="animate-float relative z-20 h-130 w-65 rounded-[3rem] border-8 border-secondary bg-background p-2.5 shadow-2xl transition-all duration-300">
           <div class="absolute top-3.5 left-1/2 -translate-x-1/2 h-3.5 w-16 rounded-full bg-secondary z-20"></div>
           <div class="h-full w-full overflow-hidden rounded-[2.2rem] bg-[#f8f9fa] flex items-center justify-center">
+            <!-- Trocado para object-cover object-top -->
             <img :src="appPrint" alt="Tela principal do app - Treino Pesado Academia"
-              class="h-full w-full object-contain object-center" loading="lazy" decoding="async" width="260" height="520" />
+              class="h-full w-full object-cover object-top" loading="lazy" decoding="async" width="260" height="520" />
           </div>
         </div>
 
@@ -95,8 +97,9 @@
             : 'opacity-0 translate-x-0 rotate-0 scale-75 pointer-events-none'">
           <div class="absolute top-3 left-1/2 -translate-x-1/2 h-3 w-12 rounded-full bg-secondary z-20"></div>
           <div class="h-full w-full overflow-hidden rounded-4xl bg-[#f8f9fa] flex items-center justify-center">
+            <!-- Trocado para object-cover object-top -->
             <img :src="appPrintRightImg || appPrint" alt="Tela secundária do app - Treino Pesado"
-              class="h-full w-full object-contain object-center" loading="lazy" decoding="async" width="220" height="440" />
+              class="h-full w-full object-cover object-top" loading="lazy" decoding="async" width="220" height="440" />
           </div>
         </div>
 
