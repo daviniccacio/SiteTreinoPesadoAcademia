@@ -8,11 +8,6 @@
 
 > Landing page moderna, responsiva e de alta performance desenvolvida para a **Academia Treino Pesado**, localizada em **São Mateus do Maranhão - MA**. Focada em conversão, apresentação de estrutura e acesso ao aplicativo oficial.
 
-<div align="center">
-  <!-- TODO: Tire uma screenshot do seu site rodando e substitua o link da imagem abaixo pelo link real da sua imagem -->
-  <img src="/assets/img/printsite.png" alt="Demonstração do Site Treino Pesado" width="100%">
-</div>
-
 ---
 
 ## 🚀 Tecnologias Utilizadas
