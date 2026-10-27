@@ -1,0 +1,38 @@
+# netlify.toml
+
+[build]
+  # Comando para compilar a tua aplicação Vite com o PNPM
+  command = "pnpm run build"
+  
+  # Pasta que o Netlify vai tornar pública para o mundo (gerada pelo Vite)
+  publish = "dist"
+
+# Redirecionamento global para suportar o Vue Router (History Mode)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# ==========================================
+# REGRAS E NORMAS DE SEGURANÇA AVANÇADAS
+# ==========================================
+[[headers]]
+  for = "/*"
+  [headers.values]
+    # 1. Impede que o teu site seja colocado num <iframe> noutro site (Clickjacking)
+    X-Frame-Options = "DENY"
+    
+    # 2. Força os navegadores a respeitarem o tipo de ficheiro, evitando ataques de injeção
+    X-Content-Type-Options = "nosniff"
+    
+    # 3. Bloqueia ataques Cross-Site Scripting (XSS) nos navegadores mais antigos
+    X-XSS-Protection = "1; mode=block"
+    
+    # 4. Controla as informações enviadas quando o utilizador clica num link a sair do teu site
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    
+    # 5. HSTS: Obriga os navegadores a acederem ao teu domínio APENAS via HTTPS durante 1 ano
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
+    
+    # 6. Desativa funcionalidades do navegador que a tua landing page não precisa (Privacidade)
+    Permissions-Policy = "geolocation=(), microphone=(), camera=(), payment=()"

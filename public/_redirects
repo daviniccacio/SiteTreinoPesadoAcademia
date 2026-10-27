@@ -1,1 +1,4 @@
-/*    /index.html   200
+# public/_redirects
+# Redireciona todo o tráfego não encontrado diretamente para o index.html
+# Isso permite que o Vue Router assuma o controle da navegação.
+/*    /index.html    200
